@@ -1,58 +1,106 @@
 <!doctype html>
-<html lang="en">
+<html lang="de">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="A static test website deployed by GitHub Actions.">
-  <title>Alemannia CI Test Site</title>
+  <meta name="description" content="Braunschweiger Burschenschaft Alemannia: Gemeinschaft, Studium und Tradition seit 1850.">
+  <title>Braunschweiger Burschenschaft Alemannia</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Newsreader:opsz,wght@6..72,500;6..72,600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
   <script src="script.js" defer></script>
 </head>
 <body>
   <header class="site-header">
-    <a class="brand" href="./" aria-label="Alemannia test site home">
-      <span class="brand-mark" aria-hidden="true">A</span>
-      <span>Alemannia</span>
+    <a class="brand" href="#start" aria-label="Zur Startseite">
+      <span class="brand-colors" aria-hidden="true"><i></i><i></i><i></i></span>
+      <span class="brand-name">B! Alemannia <small>Braunschweig</small></span>
     </a>
-    <span class="environment"><span class="status-dot" aria-hidden="true"></span>Static preview</span>
+    <button class="menu-button" type="button" aria-expanded="false" aria-controls="navigation">
+      <span></span><span></span><span class="sr-only">Menü öffnen</span>
+    </button>
+    <nav id="navigation" aria-label="Hauptnavigation">
+      <a href="#gemeinschaft">Gemeinschaft</a>
+      <a href="#haus">Das Haus</a>
+      <a href="#geschichte">Geschichte</a>
+      <a class="nav-contact" href="#kontakt">Kontakt</a>
+    </nav>
   </header>
 
-  <main>
+  <main id="start">
     <section class="hero" aria-labelledby="page-title">
-      <p class="eyebrow">GitHub Pages deployment target</p>
-      <h1 id="page-title" data-testid="page-title">CI is online.</h1>
-      <p class="intro">A small, dependency-free endpoint for deployment checks, browser tests, and build verification.</p>
-      <div class="actions">
-        <button id="health-check" class="primary-action" type="button" data-testid="health-check">Run health check</button>
-        <a class="text-link" href="https://github.com/lonesomeranger/alemannia/actions">View workflows <span aria-hidden="true">&rarr;</span></a>
+      <div class="hero-copy">
+        <p class="kicker">Braunschweiger Burschenschaft Alemannia</p>
+        <h1 id="page-title">Gemeinschaft, die das Studium begleitet.</h1>
+        <p class="hero-intro">Mehr als eine WG: Im Alemannenhaus leben Studenten, die gemeinsam lernen, Verantwortung übernehmen und eine gute Zeit in Braunschweig gestalten.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#kontakt">Lern uns kennen</a>
+          <a class="button button-link" href="#gemeinschaft">Mehr über uns <span aria-hidden="true">↓</span></a>
+        </div>
+      </div>
+      <div class="hero-crest">
+        <img src="ChatGPT Image 24. Aug. 2026, 23_54_19.png" alt="Wappen der Braunschweiger Burschenschaft Alemannia">
+        <p><span>Per aspera ad astra</span><small>Durch das Raue zu den Sternen</small></p>
       </div>
     </section>
 
-    <section class="status-panel" aria-labelledby="status-title">
-      <div>
-        <p class="label">Current status</p>
-        <h2 id="status-title" data-testid="status-message">Ready for testing</h2>
+    <section class="intro-section" id="gemeinschaft" aria-labelledby="gemeinschaft-title">
+      <p class="section-number">01 — Gemeinschaft</p>
+      <div class="section-copy">
+        <h2 id="gemeinschaft-title">Zusammen studieren.<br>Zusammen wachsen.</h2>
+        <div class="columns">
+          <p>Bei uns wohnen Studenten verschiedener Fachrichtungen unter einem Dach. Wir unterstützen uns bei Prüfungen, im Uni-Alltag und darüber hinaus. Das Studium steht dabei immer an erster Stelle.</p>
+          <p>Kochabende, Gespräche am Lagerfeuer oder die große Feier im Semester: Wer etwas unternehmen möchte, findet immer jemanden, der dabei ist. Und wer Ruhe braucht, findet auch dafür seinen Platz.</p>
+        </div>
       </div>
-      <dl class="metrics">
-        <div>
-          <dt>Hosting</dt>
-          <dd>GitHub Pages</dd>
-        </div>
-        <div>
-          <dt>Build</dt>
-          <dd>Static HTML</dd>
-        </div>
-        <div>
-          <dt>Dependencies</dt>
-          <dd>None</dd>
-        </div>
-      </dl>
+    </section>
+
+    <section class="principles" aria-label="Was uns verbindet">
+      <article><span>01</span><h3>Studium</h3><p>Gemeinsam lernen, Wissen teilen und das eigene Ziel konsequent verfolgen.</p></article>
+      <article><span>02</span><h3>Freundschaft</h3><p>Ein Lebensbund, der über Studienzeit, Stadtgrenzen und Generationen hinaus trägt.</p></article>
+      <article><span>03</span><h3>Verantwortung</h3><p>Mitgestalten, Haltung zeigen und füreinander einstehen, im Haus wie im Alltag.</p></article>
+      <article><span>04</span><h3>Tradition</h3><p>Gewachsene Werte kennen, kritisch prüfen und zeitgemäß weiterleben.</p></article>
+    </section>
+
+    <section class="house-section" id="haus" aria-labelledby="haus-title">
+      <div class="house-mark" aria-hidden="true">
+        <span>Das Haus</span>
+        <strong>1913</strong>
+        <small>Rebenring 28</small>
+      </div>
+      <div class="house-copy">
+        <p class="section-number">02 — Das Alemannenhaus</p>
+        <h2 id="haus-title">Mitten im Univiertel zuhause.</h2>
+        <p>Seit 1913 ist das Alemannenhaus am Rebenring der Mittelpunkt unseres Bundeslebens. Hier wird gewohnt, gelernt, diskutiert und gefeiert. Die Technische Universität liegt direkt vor der Haustür.</p>
+        <dl class="facts">
+          <div><dt>Adresse</dt><dd>Rebenring 28<br>38106 Braunschweig</dd></div>
+          <div><dt>Seit</dt><dd>1913</dd></div>
+          <div><dt>Lage</dt><dd>Direkt an der TU</dd></div>
+        </dl>
+      </div>
+    </section>
+
+    <section class="history-section" id="geschichte" aria-labelledby="geschichte-title">
+      <div><p class="section-number">03 — Unsere Geschichte</p><h2 id="geschichte-title">Seit 1850 in Braunschweig.</h2></div>
+      <div class="history-copy">
+        <p>Am 1. Mai 1850 wurde die Progressverbindung Allemannia gestiftet. Ihre Farben Schwarz, Gold und Blau tragen wir bis heute. Aus dem Braunschweiger Fechtverein entstand 1873 die Burschenschaft Alemannia; 1875 wurde ihr die Tradition der ursprünglichen Allemannia übergeben.</p>
+        <p>Mehr als 175 Jahre später lebt unser Bund durch jede neue Generation weiter: traditionsbewusst, eigenständig und offen für neue Ideen.</p>
+        <a class="text-link" href="https://www.alemannia-braunschweig.eu/unsere-geschichte/">Die ganze Geschichte lesen <span aria-hidden="true">↗</span></a>
+      </div>
+    </section>
+
+    <section class="contact-section" id="kontakt" aria-labelledby="kontakt-title">
+      <p class="section-number">04 — Kontakt</p>
+      <div><h2 id="kontakt-title">Neugierig geworden?</h2><p>Komm vorbei, lern das Haus kennen und mach dir selbst ein Bild von uns.</p></div>
+      <a class="button button-light" href="mailto:aktivitas@alemannia-braunschweig.eu">Schreib uns eine E-Mail</a>
     </section>
   </main>
 
   <footer>
-    <span>Alemannia test fixture</span>
-    <span id="build-time" aria-label="Page load time"></span>
+    <div class="footer-brand"><strong>B! Alemannia</strong><span>Per aspera ad astra</span></div>
+    <address>Rebenring 28<br>38106 Braunschweig</address>
+    <div class="footer-links"><a href="mailto:aktivitas@alemannia-braunschweig.eu">E-Mail</a><a href="https://www.alemannia-braunschweig.eu/impressum">Impressum</a></div>
   </footer>
 </body>
 </html>

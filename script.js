@@ -1,32 +1,15 @@
-const healthButton = document.querySelector("#health-check");
-const statusPanel = document.querySelector(".status-panel");
-const statusMessage = document.querySelector("#status-message");
-const buildTime = document.querySelector("#build-time");
+const menuButton = document.querySelector(".menu-button");
+const navigation = document.querySelector("#navigation");
 
-buildTime.textContent = `Loaded ${new Date().toISOString()}`;
+menuButton.addEventListener("click", () => {
+  const isOpen = menuButton.getAttribute("aria-expanded") === "true";
+  menuButton.setAttribute("aria-expanded", String(!isOpen));
+  navigation.classList.toggle("is-open", !isOpen);
+});
 
-healthButton.addEventListener("click", async () => {
-  healthButton.disabled = true;
-  statusMessage.textContent = "Checking endpoint...";
-
-  try {
-    const response = await fetch(window.location.href, {
-      method: "HEAD",
-      cache: "no-store",
-    });
-
-    if (!response.ok) {
-      throw new Error(`HTTP ${response.status}`);
-    }
-
-    statusPanel.classList.add("is-healthy");
-    statusMessage.textContent = `Healthy - HTTP ${response.status}`;
-    healthButton.textContent = "Check passed";
-  } catch (error) {
-    statusPanel.classList.remove("is-healthy");
-    statusMessage.textContent = `Check failed - ${error.message}`;
-    healthButton.textContent = "Try again";
-  } finally {
-    healthButton.disabled = false;
+navigation.addEventListener("click", (event) => {
+  if (event.target.closest("a")) {
+    menuButton.setAttribute("aria-expanded", "false");
+    navigation.classList.remove("is-open");
   }
 });
