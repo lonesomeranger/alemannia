@@ -22,8 +22,14 @@
     .history-milestones span { max-width: 190px; margin-top: 8px; color: var(--muted); font-size: 13px; }
     .history-pair { gap: 90px; margin-top: 34px; background: transparent; border: 0; }
     .history-pair article { padding: 42px 28px 20px; background: transparent; }
-    .house-photo { min-height: 280px; overflow: hidden; }
-    .house-photo img { width: 100%; height: 100%; min-height: 280px; object-fit: cover; object-position: center; }
+    .house-section { display: block; padding: clamp(64px, 8vw, 120px) clamp(20px, 5vw, 76px); }
+    .house-gallery { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; max-width: 1480px; margin: 0 auto 72px; }
+    .house-photo { position: relative; aspect-ratio: 4 / 3; overflow: hidden; background: var(--blue); }
+    .house-photo:first-child { grid-column: 1 / -1; aspect-ratio: 3 / 2; }
+    .house-photo img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center; transition: transform .6s ease; }
+    .house-photo:hover img { transform: scale(1.02); }
+    .house-photo figcaption { position: absolute; right: 0; bottom: 0; left: 0; padding: 44px 22px 18px; background: linear-gradient(transparent, rgba(9, 18, 34, .78)); color: #fff; font-family: "Source Sans 3", sans-serif; font-size: 14px; font-weight: 600; }
+    .house-copy { max-width: 920px; margin: 0 auto; padding: 0; }
     @media (min-width: 1081px) {
       body { padding-top: 148px; }
       main > section { scroll-margin-top: 168px; }
@@ -43,10 +49,14 @@
       .history-milestones li { padding: 0 0 30px 12px; }
       .history-milestones li::before { top: 5px; left: -28px; }
       .history-pair { gap: 0; }
+      .house-gallery { margin-bottom: 56px; }
     }
     @media (max-width: 600px) {
       .brand-wordmark { width: 170px; }
       .header-crest { width: 88.8px; height: 124.8px; }
+      .house-section { width: 100%; padding-inline: 12px; }
+      .house-gallery { grid-template-columns: 1fr; gap: 12px; }
+      .house-photo, .house-photo:first-child { grid-column: auto; aspect-ratio: 4 / 3; }
     }
   </style>
   <script src="script.js?v=20260825-4" defer></script>
@@ -125,7 +135,13 @@
     </section>
 
     <section class="section house-section" id="haus" aria-labelledby="haus-title">
-      <div class="house-gallery"><figure class="house-photo"><img src="Hausfront.png" alt="Das beleuchtete Alemannenhaus am Rebenring in der Abenddämmerung"></figure><figure class="media-placeholder" role="img" aria-label="Platzhalter für ein modern eingerichtetes Zimmer"><span>Foto fehlt</span><small>Modern eingerichtetes Zimmer</small></figure><figure class="media-placeholder" role="img" aria-label="Platzhalter für Gemeinschaftsraum oder Tresen"><span>Foto fehlt</span><small>Gemeinschaftsraum / Tresen</small></figure><figure class="media-placeholder" role="img" aria-label="Platzhalter für den Garten"><span>Foto fehlt</span><small>Garten</small></figure></div>
+      <div class="house-gallery">
+        <figure class="house-photo"><img src="Hausfront.png" alt="Das beleuchtete Alemannenhaus am Rebenring in der Abenddämmerung"><figcaption>Das Alemannenhaus am Rebenring</figcaption></figure>
+        <figure class="house-photo"><img src="garten.png" alt="Der begrünte Garten des Alemannenhauses mit Sitzgruppe, Esstisch und Grill"><figcaption>Unser Garten mit Grill- und Sitzbereich</figcaption></figure>
+        <figure class="house-photo"><img src="gemeinschaftszimmer.png" alt="Der helle Gemeinschaftsraum im Alemannenhaus mit Sofas und großem Esstisch"><figcaption>Gemeinschaftsraum</figcaption></figure>
+        <figure class="house-photo"><img src="zimmer1.png" alt="Helles möbliertes Studentenzimmer mit Bett, Schreibtisch und Kleiderschrank"><figcaption>Freies Studentenzimmer</figcaption></figure>
+        <figure class="house-photo"><img src="zimmer2.png" alt="Möbliertes Studentenzimmer mit Bett, Schreibtisch und Sitzbereich"><figcaption>Freies Studentenzimmer</figcaption></figure>
+      </div>
       <div class="house-copy"><p class="eyebrow">Unser Zuhause in Braunschweig</p><h2 id="haus-title">Mitten im Univiertel zuhause.</h2><p>Das Alemannenhaus am Rebenring ist der Mittelpunkt unseres Bundeslebens.</p><p>Hier wird gewohnt, gelernt, gekocht, diskutiert und gefeiert. Der Hauptcampus der TU Braunschweig liegt nur wenige Minuten zu Fuß entfernt, die Innenstadt ist mit dem Fahrrad schnell erreichbar.</p><p>Unser Haus bietet neben den Studentenzimmern eine große Küche, Gemeinschaftsräume, einen Garten mit Grillmöglichkeit und viel Platz für gemeinsames Studentenleben.</p><div class="room-offer"><p class="eyebrow">Zimmer frei?</p><h3>Wohnen direkt an der Uni.</h3><p>Du suchst ein Zimmer in Braunschweig und möchtest nicht nur irgendwo wohnen?</p><p>Bei uns lebst du mit Studenten verschiedener Fachrichtungen zusammen. Neben deinem eigenen Zimmer stehen eine große Küche, Gemeinschaftsräume und ein Garten zur Verfügung. Der Hauptcampus der TU liegt praktisch vor der Haustür.</p><div class="button-row"><a class="button button-primary" href="mailto:aktivitas@burschenschaftalemannia.de?subject=Freies%20Zimmer">Freie Zimmer ansehen</a><a class="button button-link" href="https://www.wg-gesucht.de/wg-zimmer-in-Braunschweig-Univiertel.6372466.html">WG auf WG-Gesucht ansehen</a></div><small class="listing-note">Hinweis: Verfügbarkeit der WG-Gesucht-Anzeige vor Veröffentlichung prüfen.</small></div></div>
     </section>
 
