@@ -9,12 +9,28 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Newsreader:opsz,wght@6..72,500;6..72,600&family=Source+Sans+3:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css?v=20260825-11">
+  <style>
+    .brand-wordmark { width: 365px; height: auto; }
+    .header-crest { width: 220.8px; height: 268.8px; }
+    @media (max-width: 1080px) {
+      .brand-wordmark { width: 290px; }
+      .header-crest { width: 177.6px; height: 216px; }
+    }
+    @media (max-width: 900px) {
+      .brand-wordmark { width: 190px; }
+      .header-crest { width: 115.2px; height: 148.8px; }
+    }
+    @media (max-width: 600px) {
+      .brand-wordmark { width: 170px; }
+      .header-crest { width: 88.8px; height: 124.8px; }
+    }
+  </style>
   <script src="script.js?v=20260825-4" defer></script>
 </head>
 <body>
   <header class="site-header">
     <a class="brand" href="#start" aria-label="Zur Startseite">
-      <span class="brand-name"><small>Braunschweiger Burschenschaft</small>Alemannia<span class="brand-founded">Seit 1850</span></span>
+      <img class="brand-wordmark" src="alemannia-wortmarke.png" alt="Braunschweiger Burschenschaft Alemannia, seit 1850">
     </a>
     <nav id="navigation" aria-label="Hauptnavigation">
       <a href="#gemeinschaft">Gemeinschaft</a><a href="#leben">Studentenleben</a><a href="#werte">Werte</a><a href="#geschichte">Geschichte</a><a href="#haus">Haus &amp; Zimmer</a><a class="nav-contact" href="#kontakt">Kontakt</a>
