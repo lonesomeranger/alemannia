@@ -33,6 +33,9 @@
     .event-photo { position: relative; min-height: 280px; overflow: hidden; background: var(--blue); }
     .event-photo img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center; }
     .event-photo figcaption { position: absolute; right: 0; bottom: 0; left: 0; padding: 44px 20px 16px; background: linear-gradient(transparent, rgba(9, 18, 34, .82)); color: #fff; font-size: 14px; font-weight: 600; }
+    @media (min-width: 901px) {
+      .photo-grid > * { min-height: 0; }
+    }
     @media (min-width: 1081px) {
       body { padding-top: 148px; }
       main > section { scroll-margin-top: 168px; }
