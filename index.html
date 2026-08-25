@@ -12,6 +12,25 @@
   <style>
     .brand-wordmark { width: 365px; height: auto; }
     .header-crest { width: 220.8px; height: 268.8px; }
+    .history-pair { position: relative; gap: 90px; background: transparent; border: 0; }
+    .history-pair::before { position: absolute; z-index: 0; top: 112px; right: 8%; left: 8%; height: 1px; background: var(--gold); content: ""; }
+    .history-pair article { position: relative; padding: 42px 28px 20px; background: transparent; }
+    .history-pair article::before { position: absolute; z-index: 1; top: 108px; left: 50%; width: 9px; height: 9px; border: 3px solid var(--paper); border-radius: 50%; background: var(--gold); content: ""; transform: translateX(-50%); }
+    .history-pair article > strong { position: relative; z-index: 1; display: inline-block; padding-right: 20px; background: var(--paper); }
+    .room-offer { grid-column: 1 / -1; margin: 70px 0 -120px; padding: 80px 0; color: white; background: var(--ink); border: 0; box-shadow: 0 0 0 100vmax var(--ink); clip-path: inset(0 -100vmax); }
+    .room-offer .eyebrow { color: var(--gold); }
+    .room-offer h3 { max-width: 760px; color: white; font-size: clamp(48px, 5vw, 72px); }
+    .room-offer p { max-width: 760px; color: #d5d5d1; }
+    .room-offer .button-primary { color: var(--ink); background: white; }
+    .room-offer .button-link { color: white; border-bottom-color: var(--gold); }
+    .room-offer .listing-note { color: #aaa; }
+    @media (min-width: 1081px) {
+      body { padding-top: 148px; }
+      main > section { scroll-margin-top: 168px; }
+      .site-header { grid-template-columns: minmax(390px, .9fr) auto 228px; gap: 48px; min-height: 148px; }
+      .brand { padding-block: 18px; }
+      .hero { min-height: min(790px, calc(100vh - 148px)); }
+    }
     @media (max-width: 1080px) {
       .brand-wordmark { width: 290px; }
       .header-crest { width: 177.6px; height: 216px; }
@@ -19,6 +38,11 @@
     @media (max-width: 900px) {
       .brand-wordmark { width: 190px; }
       .header-crest { width: 115.2px; height: 148.8px; }
+      .history-pair { gap: 0; }
+      .history-pair::before { top: 0; right: auto; bottom: 0; left: 18px; width: 1px; height: auto; }
+      .history-pair article { padding-left: 48px; }
+      .history-pair article::before { top: 64px; left: 18px; }
+      .room-offer { margin-top: 40px; margin-bottom: -92px; padding-block: 64px; }
     }
     @media (max-width: 600px) {
       .brand-wordmark { width: 170px; }
@@ -101,7 +125,8 @@
 
     <section class="section house-section" id="haus" aria-labelledby="haus-title">
       <div class="house-gallery"><figure class="media-placeholder" role="img" aria-label="Platzhalter für das Haus bei Sonnenschein"><span>Foto fehlt</span><small>Haus bei Sonnenschein</small></figure><figure class="media-placeholder" role="img" aria-label="Platzhalter für ein modern eingerichtetes Zimmer"><span>Foto fehlt</span><small>Modern eingerichtetes Zimmer</small></figure><figure class="media-placeholder" role="img" aria-label="Platzhalter für Gemeinschaftsraum oder Tresen"><span>Foto fehlt</span><small>Gemeinschaftsraum / Tresen</small></figure><figure class="media-placeholder" role="img" aria-label="Platzhalter für den Garten"><span>Foto fehlt</span><small>Garten</small></figure></div>
-      <div class="house-copy"><p class="eyebrow">Unser Zuhause in Braunschweig</p><h2 id="haus-title">Mitten im Univiertel zuhause.</h2><p>Das Alemannenhaus am Rebenring ist der Mittelpunkt unseres Bundeslebens.</p><p>Hier wird gewohnt, gelernt, gekocht, diskutiert und gefeiert. Der Hauptcampus der TU Braunschweig liegt nur wenige Minuten zu Fuß entfernt, die Innenstadt ist mit dem Fahrrad schnell erreichbar.</p><p>Unser Haus bietet neben den Studentenzimmern eine große Küche, Gemeinschaftsräume, einen Garten mit Grillmöglichkeit und viel Platz für gemeinsames Studentenleben.</p><div class="room-offer"><p class="eyebrow">Zimmer frei?</p><h3>Wohnen direkt an der Uni.</h3><p>Du suchst ein Zimmer in Braunschweig und möchtest nicht nur irgendwo wohnen?</p><p>Bei uns lebst du mit Studenten verschiedener Fachrichtungen zusammen. Neben deinem eigenen Zimmer stehen eine große Küche, Gemeinschaftsräume und ein Garten zur Verfügung. Der Hauptcampus der TU liegt praktisch vor der Haustür.</p><div class="button-row"><a class="button button-primary" href="mailto:aktivitas@burschenschaftalemannia.de?subject=Freies%20Zimmer">Freie Zimmer ansehen</a><a class="button button-link" href="https://www.wg-gesucht.de/wg-zimmer-in-Braunschweig-Univiertel.6372466.html">WG auf WG-Gesucht ansehen</a></div><small class="listing-note">Hinweis: Verfügbarkeit der WG-Gesucht-Anzeige vor Veröffentlichung prüfen.</small></div></div>
+      <div class="house-copy"><p class="eyebrow">Unser Zuhause in Braunschweig</p><h2 id="haus-title">Mitten im Univiertel zuhause.</h2><p>Das Alemannenhaus am Rebenring ist der Mittelpunkt unseres Bundeslebens.</p><p>Hier wird gewohnt, gelernt, gekocht, diskutiert und gefeiert. Der Hauptcampus der TU Braunschweig liegt nur wenige Minuten zu Fuß entfernt, die Innenstadt ist mit dem Fahrrad schnell erreichbar.</p><p>Unser Haus bietet neben den Studentenzimmern eine große Küche, Gemeinschaftsräume, einen Garten mit Grillmöglichkeit und viel Platz für gemeinsames Studentenleben.</p></div>
+      <div class="room-offer"><p class="eyebrow">Zimmer frei?</p><h3>Wohnen direkt an der Uni.</h3><p>Du suchst ein Zimmer in Braunschweig und möchtest nicht nur irgendwo wohnen?</p><p>Bei uns lebst du mit Studenten verschiedener Fachrichtungen zusammen. Neben deinem eigenen Zimmer stehen eine große Küche, Gemeinschaftsräume und ein Garten zur Verfügung. Der Hauptcampus der TU liegt praktisch vor der Haustür.</p><div class="button-row"><a class="button button-primary" href="mailto:aktivitas@burschenschaftalemannia.de?subject=Freies%20Zimmer">Freie Zimmer ansehen</a><a class="button button-link" href="https://www.wg-gesucht.de/wg-zimmer-in-Braunschweig-Univiertel.6372466.html">WG auf WG-Gesucht ansehen</a></div><small class="listing-note">Hinweis: Verfügbarkeit der WG-Gesucht-Anzeige vor Veröffentlichung prüfen.</small></div>
     </section>
 
     <section class="section contact-section" id="kontakt" aria-labelledby="kontakt-title">
