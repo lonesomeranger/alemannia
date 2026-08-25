@@ -30,6 +30,9 @@
     .house-photo:hover img { transform: scale(1.02); }
     .house-photo figcaption { position: absolute; right: 0; bottom: 0; left: 0; padding: 44px 22px 18px; background: linear-gradient(transparent, rgba(9, 18, 34, .78)); color: #fff; font-family: "Source Sans 3", sans-serif; font-size: 14px; font-weight: 600; }
     .house-copy { max-width: 920px; margin: 0 auto; padding: 0; }
+    .event-photo { position: relative; min-height: 280px; overflow: hidden; background: var(--blue); }
+    .event-photo img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center; }
+    .event-photo figcaption { position: absolute; right: 0; bottom: 0; left: 0; padding: 44px 20px 16px; background: linear-gradient(transparent, rgba(9, 18, 34, .82)); color: #fff; font-size: 14px; font-weight: 600; }
     @media (min-width: 1081px) {
       body { padding-top: 148px; }
       main > section { scroll-margin-top: 168px; }
@@ -103,7 +106,7 @@
     <section class="section life-section" id="leben" aria-labelledby="leben-title">
       <div class="section-heading"><p class="eyebrow">Leben bei Alemannia</p><h2 id="leben-title">Studieren gehört dazu.<br>Das Studentenleben auch.</h2></div>
       <div class="section-text"><p>Ein Studium besteht aus mehr als Vorlesungen, Klausuren und Bibliothek.</p><p>Bei Alemannia wollen wir diese Jahre gemeinsam erleben. Wir kochen zusammen, grillen im Garten, schauen Fußball, veranstalten Film- und Spieleabende, feiern Partys und Kneipen und unternehmen gemeinsam Ausflüge und Reisen.</p><p>Mal ist das Haus voller Leute, mal sitzt man mit ein paar Freunden am Tresen. Vieles entsteht spontan aus der Gemeinschaft heraus.</p><p>Das Studium nehmen wir ernst. Genauso wichtig ist uns aber, dass aus diesen Jahren Erinnerungen und Freundschaften entstehen, die bleiben.</p></div>
-      <div class="photo-grid"><figure class="media-placeholder media-large" role="img" aria-label="Platzhalter für ein Foto vom Grillen im Garten"><span>Foto fehlt</span><small>Grillen im Garten · 3 bis 6 Aktive · Sommer / Tageslicht</small></figure><figure class="media-placeholder" role="img" aria-label="Platzhalter für einen gemeinsamen Abend am Tresen"><span>Foto fehlt</span><small>Gemeinsamer Abend am Tresen</small></figure><figure class="media-placeholder" role="img" aria-label="Platzhalter für eine Party oder Kneipe"><span>Foto fehlt</span><small>Party / Kneipe / Veranstaltung</small></figure></div>
+      <div class="photo-grid"><figure class="event-photo media-large"><img src="Ball.png" alt="Festlich gekleidete Mitglieder, Familien und Gäste gemeinsam im Garten"><figcaption>Gemeinschaft beim Ball</figcaption></figure><figure class="media-placeholder" role="img" aria-label="Platzhalter für einen gemeinsamen Abend am Tresen"><span>Foto fehlt</span><small>Gemeinsamer Abend am Tresen</small></figure><figure class="event-photo"><img src="Kommerz.png" alt="Teilnehmer eines Kommerses an langen, festlich gedeckten Tafeln"><figcaption>Kommers im Alemannenhaus</figcaption></figure></div>
     </section>
 
     <section class="section values-section" id="werte" aria-labelledby="werte-title">
