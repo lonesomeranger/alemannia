@@ -8,97 +8,98 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Newsreader:opsz,wght@6..72,500;6..72,600&family=Source+Sans+3:wght@400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=20260825-6">
-  <script src="script.js?v=20260825-1" defer></script>
+  <link rel="stylesheet" href="styles.css?v=20260825-7">
+  <script src="script.js?v=20260825-3" defer></script>
 </head>
 <body>
   <header class="site-header">
     <a class="brand" href="#start" aria-label="Zur Startseite">
-      <span class="brand-copy">
-        <span class="brand-name"><small>Braunschweiger Burschenschaft</small>Alemannia</span>
-      </span>
+      <img class="brand-crest" src="wappen-freigestellt.png" alt="">
+      <span class="brand-name"><small>Braunschweiger Burschenschaft</small>Alemannia<em>Seit 1850</em></span>
     </a>
     <nav id="navigation" aria-label="Hauptnavigation">
-      <a href="#gemeinschaft">Gemeinschaft</a>
-      <a href="#haus">Das Haus</a>
-      <a href="#geschichte">Geschichte</a>
-      <a class="nav-contact" href="#kontakt">Kontakt</a>
+      <a href="#start">Alemannia</a><a href="#gemeinschaft">Gemeinschaft</a><a href="#werte">Werte</a><a href="#geschichte">Geschichte</a><a href="#haus">Haus &amp; Zimmer</a><a href="#leben">Veranstaltungen</a><a href="#kontakt">Kontakt</a>
     </nav>
     <button class="menu-button" type="button" aria-expanded="false" aria-controls="navigation">
       <span></span><span></span><span class="sr-only">Menü öffnen</span>
     </button>
-    <img class="brand-crest" src="wappen-freigestellt.png" alt="Wappen der Braunschweiger Burschenschaft Alemannia">
   </header>
 
-  <main id="start">
-    <section class="hero" aria-labelledby="page-title">
+  <main>
+    <section class="hero" id="start" aria-labelledby="page-title">
       <div class="hero-copy">
-        <p class="hero-motto">Per aspera ad astra</p>
-        <h1 id="page-title">Gemeinschaft, die<span class="desktop-break"><br></span> das Studium begleitet.</h1>
+        <p class="eyebrow">Braunschweiger Burschenschaft Alemannia · Seit 1850</p>
+        <h1 id="page-title">Gemeinschaft, die das Studium begleitet.</h1>
         <p class="hero-intro">Mehr als eine WG. Gemeinschaft, Freundschaft und Verantwortung – während des Studiums in Braunschweig und weit darüber hinaus.</p>
         <div class="hero-actions">
           <a class="button button-primary" href="#kontakt">Lern uns kennen</a>
-          <a class="button button-link" href="#kontakt">Zimmer frei <span aria-hidden="true">→</span></a>
+          <a class="button button-link" href="#haus">Zimmer frei <span aria-hidden="true">→</span></a>
         </div>
+        <p class="hero-note">Seit 1850 · älteste burschenschaftliche Tradition Braunschweigs</p>
+      </div>
+      <figure class="media-placeholder hero-media" role="img" aria-label="Platzhalter für ein Foto von Aktiven auf dem Alemannenhaus"><span>Aktive &amp; Gemeinschaft</span><small>Hero-Foto austauschen</small></figure>
+    </section>
+
+    <section class="section community-section" id="gemeinschaft" aria-labelledby="gemeinschaft-title">
+      <div class="section-heading"><p class="eyebrow">Gemeinschaft</p><h2 id="gemeinschaft-title">Zusammen studieren.<br>Zusammen wachsen.</h2></div>
+      <div class="lead-columns"><p>Bei uns treffen Studenten unterschiedlicher Fachrichtungen, Semester und Persönlichkeiten aufeinander. Wir unterstützen uns bei Prüfungen, im Uni-Alltag und darüber hinaus. Das Studium steht dabei immer an erster Stelle.</p><p>Aber Alemannia besteht nicht nur aus Lernen und gegenseitiger Unterstützung. Wir kochen zusammen, sitzen im Garten, fahren gemeinsam weg, diskutieren bis spät in die Nacht und feiern zusammen.</p></div>
+      <div class="principles" aria-label="Was unsere Gemeinschaft ausmacht">
+        <article><span>01</span><h3>Studium</h3><p>Gemeinsam lernen, Wissen teilen und das eigene Ziel konsequent verfolgen.</p></article>
+        <article><span>02</span><h3>Freundschaft</h3><p>Gemeinsam eine gute Zeit haben und Freundschaften aufbauen, die weit über das Studium hinausreichen.</p></article>
+        <article><span>03</span><h3>Verantwortung</h3><p>Mitgestalten, Verantwortung übernehmen und füreinander einstehen.</p></article>
+        <article><span>04</span><h3>Tradition</h3><p>Gewachsene Werte kennen, kritisch prüfen und zeitgemäß weiterleben.</p></article>
       </div>
     </section>
 
-    <section class="intro-section" id="gemeinschaft" aria-labelledby="gemeinschaft-title">
-      <p class="section-number">01 — Gemeinschaft</p>
-      <div class="section-copy">
-        <h2 id="gemeinschaft-title">Zusammen studieren.<br>Zusammen wachsen.</h2>
-        <div class="columns">
-          <p>Bei uns wohnen Studenten verschiedener Fachrichtungen unter einem Dach. Wir unterstützen uns bei Prüfungen, im Uni-Alltag und darüber hinaus. Das Studium steht dabei immer an erster Stelle.</p>
-          <p>Kochabende, Gespräche am Lagerfeuer oder die große Feier im Semester: Wer etwas unternehmen möchte, findet immer jemanden, der dabei ist. Und wer Ruhe braucht, findet auch dafür seinen Platz.</p>
-        </div>
-      </div>
+    <section class="section life-section" id="leben" aria-labelledby="leben-title">
+      <div class="section-heading"><p class="eyebrow">Leben bei Alemannia</p><h2 id="leben-title">Studieren gehört dazu.<br>Das Studentenleben auch.</h2></div>
+      <div class="section-text"><p>Ein Studium besteht aus mehr als Vorlesungen, Klausuren und Bibliothek.</p><p>Bei Alemannia wollen wir diese Jahre gemeinsam erleben. Ob Kochabend, Grillen im Garten, Kneipe, Party, Ausflug, Sport oder einfach ein spontanes Bier am Tresen – vieles entsteht aus der Gemeinschaft heraus.</p><p>Manche Veranstaltungen gehören seit Generationen zu unserem Bundesleben. Andere entstehen spontan aus einer guten Idee.</p></div>
+      <div class="photo-grid"><figure class="media-placeholder media-large" role="img" aria-label="Platzhalter für ein Foto vom Grillen im Garten"><span>Grillen im Garten</span></figure><figure class="media-placeholder" role="img" aria-label="Platzhalter für ein Foto vom Hausleben"><span>Hausleben</span></figure><figure class="media-placeholder" role="img" aria-label="Platzhalter für ein Foto einer gemeinsamen Veranstaltung"><span>Veranstaltung</span></figure></div>
     </section>
 
-    <section class="principles" aria-label="Was uns verbindet">
-      <article><span>01</span><h3>Studium</h3><p>Gemeinsam lernen, Wissen teilen und das eigene Ziel konsequent verfolgen.</p></article>
-      <article><span>02</span><h3>Freundschaft</h3><p>Ein Lebensbund, der über Studienzeit, Stadtgrenzen und Generationen hinaus trägt.</p></article>
-      <article><span>03</span><h3>Verantwortung</h3><p>Mitgestalten, Haltung zeigen und füreinander einstehen, im Haus wie im Alltag.</p></article>
-      <article><span>04</span><h3>Tradition</h3><p>Gewachsene Werte kennen, kritisch prüfen und zeitgemäß weiterleben.</p></article>
+    <section class="section values-section" id="werte" aria-labelledby="werte-title">
+      <div class="section-heading"><p class="eyebrow">Wofür wir stehen</p><h2 id="werte-title">Ehre. Freiheit. Vaterland.</h2><p class="section-intro">Unser Wahlspruch begleitet Alemannia seit Generationen. Die Begriffe stammen aus der Geschichte der burschenschaftlichen Bewegung. Für uns sind sie aber keine Begriffe aus dem Museum. Entscheidend ist, was sie heute bedeuten.</p></div>
+      <div class="value-columns"><article><h3>Ehre</h3><p>Ehrlich und verlässlich handeln, Verantwortung für das eigene Verhalten übernehmen und anderen mit Respekt begegnen.</p></article><article><h3>Freiheit</h3><p>Die eigene Persönlichkeit entfalten, selbstständig denken und die eigene Meinung frei vertreten können – verbunden mit Verantwortung für die eigenen Entscheidungen.</p></article><article><h3>Vaterland</h3><p>Verbundenheit mit Deutschland, seiner Geschichte, Kultur und Gesellschaft – und die Bereitschaft, Verantwortung für seine Gegenwart und Zukunft zu übernehmen.</p><p class="fine-print">Die Verbundenheit mit dem eigenen Land bedeutet für uns keine Abwertung anderer Länder, Kulturen oder Menschen.</p></article></div>
     </section>
 
-    <section class="house-section" id="haus" aria-labelledby="haus-title">
-      <div class="house-mark" aria-hidden="true">
-        <span>Das Haus</span>
-        <strong>1913</strong>
-        <small>Rebenring 28</small>
-      </div>
-      <div class="house-copy">
-        <p class="section-number">02 — Das Alemannenhaus</p>
-        <h2 id="haus-title">Mitten im Univiertel zuhause.</h2>
-        <p>Seit 1913 ist das Alemannenhaus am Rebenring der Mittelpunkt unseres Bundeslebens. Hier wird gewohnt, gelernt, diskutiert und gefeiert. Die Technische Universität liegt direkt vor der Haustür.</p>
-        <dl class="facts">
-          <div><dt>Adresse</dt><dd>Rebenring 28<br>38106 Braunschweig</dd></div>
-          <div><dt>Seit</dt><dd>1913</dd></div>
-          <div><dt>Lage</dt><dd>Direkt an der TU</dd></div>
-        </dl>
-      </div>
+    <section class="section split-section discussion-section" id="diskussion" aria-labelledby="diskussion-title">
+      <div class="split-copy"><p class="eyebrow">Selbst denken. Miteinander diskutieren.</p><h2 id="diskussion-title">Eine Gemeinschaft unterschiedlicher Meinungen.</h2><p>Burschenschaften waren seit ihren Anfängen nicht nur studentische Gemeinschaften. Sie beschäftigten sich mit den politischen und gesellschaftlichen Fragen ihrer Zeit. Diesen Anspruch wollen wir weitertragen.</p><p>Politisch zu sein bedeutet für uns jedoch nicht, eine gemeinsame politische Linie vorzugeben. Bei Alemannia gibt es unterschiedliche politische Überzeugungen und Perspektiven.</p><blockquote>„Wir wollen keine politische Echokammer sein.“</blockquote><p>Wir erwarten die Bereitschaft, sich eine eigene Meinung zu bilden, sie begründen zu können und andere Positionen respektvoll zu diskutieren. Grundlage sind die freiheitlich-demokratische Grundordnung, die Würde jedes Einzelnen und gegenseitiger Respekt.</p></div>
+      <figure class="media-placeholder portrait-media" role="img" aria-label="Platzhalter für ein Foto eines politischen Diskussionsabends"><span>Diskussion &amp; Vortrag</span><small>Originalfoto folgt</small></figure>
     </section>
 
-    <section class="history-section" id="geschichte" aria-labelledby="geschichte-title">
-      <div><p class="section-number">03 — Unsere Geschichte</p><h2 id="geschichte-title">Seit 1850 in Braunschweig.</h2></div>
-      <div class="history-copy">
-        <p>Am 1. Mai 1850 wurde die Progressverbindung Allemannia gestiftet. Ihre Farben Schwarz, Gold und Blau tragen wir bis heute. Aus dem Braunschweiger Fechtverein entstand 1873 die Burschenschaft Alemannia; 1875 wurde ihr die Tradition der ursprünglichen Allemannia übergeben.</p>
-        <p>Mehr als 175 Jahre später lebt unser Bund durch jede neue Generation weiter: traditionsbewusst, eigenständig und offen für neue Ideen.</p>
-        <a class="text-link" href="https://www.alemannia-braunschweig.eu/unsere-geschichte/">Die ganze Geschichte lesen <span aria-hidden="true">↗</span></a>
-      </div>
+    <section class="section split-section bond-section" id="lebensbund" aria-labelledby="lebensbund-title">
+      <figure class="media-placeholder portrait-media" role="img" aria-label="Platzhalter für ein Foto von Aktiven und Alten Herren"><span>Aktive &amp; Alte Herren</span><small>Originalfoto folgt</small></figure>
+      <div class="split-copy"><p class="eyebrow">Über das Studium hinaus</p><h2 id="lebensbund-title">Freundschaft für ein Studium. Gemeinschaft fürs Leben.</h2><p>Alemannia endet nicht mit dem letzten Semester. Unser Lebensbund verbindet Studenten und ehemalige Studenten über Generationen hinweg.</p><p>Während des Studiums bedeutet das gegenseitige Unterstützung: Erfahrungen weitergeben, gemeinsam lernen, Verantwortung übernehmen und füreinander da sein. Später bleiben Freundschaften bestehen.</p><p>Dabei verstehen wir den Lebensbund nicht in erster Linie als berufliches Netzwerk. Es geht um persönliche Beziehungen und gegenseitige Unterstützung.</p><p class="highlight-line">Wer heute Unterstützung bekommt, kann sie morgen selbst weitergeben.</p></div>
     </section>
 
-    <section class="contact-section" id="kontakt" aria-labelledby="kontakt-title">
-      <p class="section-number">04 — Kontakt</p>
-      <div><h2 id="kontakt-title">Neugierig geworden?</h2><p>Komm vorbei, lern das Haus kennen und mach dir selbst ein Bild von uns.</p></div>
-      <a class="button button-light" href="mailto:aktivitas@alemannia-braunschweig.eu">Schreib uns eine E-Mail</a>
+    <section class="section tradition-section" id="tradition" aria-labelledby="tradition-title">
+      <div class="tradition-copy"><p class="eyebrow">Gestern verstehen. Heute gestalten.</p><h2 id="tradition-title">Tradition, die nicht stehen bleibt.</h2><p>Tradition bedeutet für uns nicht, die Vergangenheit unverändert zu kopieren. Wir wollen wissen, woher wir kommen, unsere Geschichte verstehen und Bewährtes erhalten. Gleichzeitig gehört es zu einer lebendigen Verbindung, Traditionen immer wieder zu hinterfragen und weiterzuentwickeln.</p><p>Dazu gehören unsere Farben, unser Wappen und unser Zirkel ebenso wie studentisches Brauchtum und unsere Veranstaltungen. Seit mehr als 175 Jahren wurde Alemannia von immer neuen Generationen geprägt.</p><p class="highlight-line">Tradition bedeutet für uns nicht Stillstand, sondern Weitergabe.</p></div>
+      <div class="tradition-mark" aria-hidden="true"><span>1850</span><img src="wappen-freigestellt.png" alt=""></div>
+    </section>
+
+    <section class="section history-section" id="geschichte" aria-labelledby="geschichte-title">
+      <div class="section-heading"><p class="eyebrow">Mehr als 175 Jahre Alemannia</p><h2 id="geschichte-title">Seit 1850 in Braunschweig.</h2></div>
+      <div class="history-copy"><p>Am 1. Mai 1850 wurde in Braunschweig die Progressverbindung Allemannia gegründet. Sie stand bereits in der Tradition der burschenschaftlichen Bewegung und vertrat burschenschaftliche Ziele. Damit reicht die burschenschaftliche Tradition Alemannias bis in das Jahr 1850 zurück – die älteste burschenschaftliche Tradition Braunschweigs.</p><p>1873 entstand aus dem Braunschweiger Fechtverein die Burschenschaft Alemannia. 1875 übergaben die verbliebenen Gründer der ursprünglichen Allemannia deren Tradition an die Burschenschaft. Seitdem haben zahlreiche Generationen unseren Bund geprägt.</p></div>
+      <ol class="timeline"><li><strong>1850</strong><span>Gründung der Allemannia</span></li><li><strong>1873</strong><span>Entstehung der Burschenschaft Alemannia</span></li><li><strong>1875</strong><span>Übernahme der Tradition</span></li><li><strong>1913</strong><span>Alemannenhaus am Rebenring</span></li><li><strong>Heute</strong><span>Mehr als 175 Jahre Tradition</span></li></ol>
+      <a class="text-link" href="https://www.alemannia-braunschweig.eu/unsere-geschichte/">Unsere Geschichte entdecken <span aria-hidden="true">→</span></a>
+    </section>
+
+    <section class="section house-section" id="haus" aria-labelledby="haus-title">
+      <div class="house-gallery"><figure class="media-placeholder house-main" role="img" aria-label="Platzhalter für eine Außenaufnahme des Alemannenhauses"><span>Außenansicht Alemannenhaus</span></figure><figure class="media-placeholder" role="img" aria-label="Platzhalter für ein Studentenzimmer"><span>Studentenzimmer</span></figure><figure class="media-placeholder" role="img" aria-label="Platzhalter für einen Gemeinschaftsraum"><span>Gemeinschaftsraum</span></figure></div>
+      <div class="house-copy"><p class="eyebrow">Zuhause am Rebenring</p><h2 id="haus-title">Mitten im Univiertel zuhause.</h2><p>Seit 1913 ist das Alemannenhaus am Rebenring der Mittelpunkt unseres Bundeslebens. Hier wird gewohnt, gelernt, gekocht, diskutiert und gefeiert. Die TU Braunschweig liegt direkt vor der Haustür.</p><p>Das Haus ist dabei mehr als günstiger Wohnraum: Es ist der Ort, an dem ein großer Teil unserer Gemeinschaft entsteht.</p><dl class="facts"><div><dt>Adresse</dt><dd>Rebenring 28<br>38106 Braunschweig</dd></div><div><dt>Seit</dt><dd>1913</dd></div><div><dt>Lage</dt><dd>Direkt an der TU</dd></div></dl><div class="button-row"><a class="button button-primary" href="mailto:aktivitas@alemannia-braunschweig.eu?subject=Freies%20Zimmer">Freie Zimmer ansehen</a><a class="button button-link" href="mailto:aktivitas@alemannia-braunschweig.eu?subject=Alemannenhaus%20kennenlernen">Haus kennenlernen</a></div></div>
+    </section>
+
+    <section class="section contact-section" id="kontakt" aria-labelledby="kontakt-title">
+      <div class="contact-copy"><p class="eyebrow">Kennenlernen</p><h2 id="kontakt-title">Mach dir dein eigenes Bild.</h2><p>Du musst keine bestimmte politische Meinung haben. Du musst auch nicht bereits wissen, was eine Burschenschaft ist oder alle unsere Traditionen kennen.</p><p>Wichtiger ist uns, dass du neugierig bist, Gemeinschaft suchst, bereit bist Verantwortung zu übernehmen und Lust hast, deine Studienzeit aktiv mitzugestalten. Am einfachsten findest du heraus, ob Alemannia zu dir passt, indem du vorbeikommst.</p><div class="button-row"><a class="button button-light" href="mailto:aktivitas@alemannia-braunschweig.eu?subject=Kennenlernen">Komm vorbei</a><a class="button button-outline-light" href="mailto:aktivitas@alemannia-braunschweig.eu?subject=WhatsApp-Kontakt">WhatsApp anfragen</a><a class="button button-outline-light" href="#leben">Veranstaltungen</a></div></div>
+      <aside class="contact-person"><div class="contact-avatar" aria-hidden="true">Foto</div><p><strong>Dein Ansprechpartner</strong><span>Aktivitas · Name und Foto folgen</span><a href="mailto:aktivitas@alemannia-braunschweig.eu">aktivitas@alemannia-braunschweig.eu</a></p></aside>
     </section>
   </main>
 
   <footer>
-    <div class="footer-brand"><strong>B! Alemannia</strong><span>Per aspera ad astra</span></div>
-    <address>Rebenring 28<br>38106 Braunschweig</address>
-    <div class="footer-links"><a href="mailto:aktivitas@alemannia-braunschweig.eu">E-Mail</a><a href="https://www.alemannia-braunschweig.eu/impressum">Impressum</a></div>
+    <div class="footer-brand"><img src="wappen-freigestellt.png" alt=""><strong>Braunschweiger Burschenschaft Alemannia</strong><span>Seit 1850</span></div>
+    <div><h3>Kontakt</h3><address>Rebenring 28<br>38106 Braunschweig</address><a href="mailto:aktivitas@alemannia-braunschweig.eu">aktivitas@alemannia-braunschweig.eu</a></div>
+    <div><h3>Navigation</h3><div class="footer-links"><a href="#gemeinschaft">Gemeinschaft</a><a href="#werte">Werte</a><a href="#geschichte">Geschichte</a><a href="#haus">Haus &amp; Zimmer</a><a href="#leben">Veranstaltungen</a><a href="#kontakt">Kontakt</a></div></div>
+    <div><h3>Rechtliches</h3><div class="footer-links"><a href="https://www.alemannia-braunschweig.eu/impressum">Impressum</a><a href="https://www.alemannia-braunschweig.eu/datenschutz/">Datenschutz</a></div></div>
   </footer>
 </body>
 </html>
