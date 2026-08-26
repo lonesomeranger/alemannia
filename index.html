@@ -10,7 +10,9 @@
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Newsreader:opsz,wght@6..72,500;6..72,600&family=Source+Sans+3:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css?v=20260825-11">
   <style>
-    .brand-wordmark { width: 365px; height: auto; }
+    .brand { position: relative; display: block; width: 365px; height: 112px; cursor: pointer; }
+    .brand-wordmark { width: 100%; height: 100%; object-fit: contain; object-position: left center; }
+    .brand-variant-count { position: absolute; right: 0; bottom: 0; min-width: 34px; padding: 2px 6px; color: var(--muted); background: rgba(255, 255, 255, .9); border: 1px solid var(--line); font-size: 10px; font-weight: 600; line-height: 1.4; text-align: center; }
     .header-crest { width: 220.8px; height: 268.8px; }
     .community-section .lead-columns { grid-template-columns: minmax(0, 760px); }
     .photo-grid { grid-template-rows: repeat(2, 305px); gap: 10px; }
@@ -81,14 +83,15 @@
       .hero { min-height: min(790px, calc(100vh - 148px)); }
     }
     @media (max-width: 1080px) {
-      .brand-wordmark { width: 290px; }
+      .brand { width: 290px; height: 88px; }
       .header-crest { width: 177.6px; height: 216px; }
       #navigation { gap: 12px; }
       #navigation a { font-size: 11px; }
       #navigation .nav-contact { padding-inline: 8px; }
     }
     @media (max-width: 900px) {
-      .brand-wordmark { width: 190px; }
+      .brand { width: 190px; height: 58px; }
+      .brand-variant-count { right: auto; bottom: -14px; left: 0; }
       .header-crest { width: 115.2px; height: 148.8px; }
       .values-section .section-heading { padding-right: 0; }
       .values-zirkel { position: static; width: min(70vw, 300px); height: auto; margin: 50px auto 0; }
@@ -108,7 +111,7 @@
       .room-offer-photo { min-height: 460px; }
     }
     @media (max-width: 600px) {
-      .brand-wordmark { width: 170px; }
+      .brand { width: 170px; height: 52px; }
       .header-crest { width: 88.8px; height: 124.8px; }
       .house-section { width: 100%; padding-inline: 12px; }
       .house-gallery { grid-template-columns: 1fr; gap: 12px; }
@@ -119,12 +122,13 @@
       .room-offer-photo { min-height: 340px; }
     }
   </style>
-  <script src="script.js?v=20260825-4" defer></script>
+  <script src="script.js?v=20260826-1" defer></script>
 </head>
 <body>
   <header class="site-header">
-    <a class="brand" href="#start" aria-label="Zur Startseite">
+    <a class="brand" href="#start" aria-label="Wortmarke Variante 1 von 4. Klicken für die nächste Variante" title="Nächste Wortmarke anzeigen">
       <img class="brand-wordmark" src="alemannia-wortmarke.png" alt="Braunschweiger Burschenschaft Alemannia, seit 1850">
+      <span class="brand-variant-count" aria-live="polite">1 / 4</span>
     </a>
     <nav id="navigation" aria-label="Hauptnavigation">
       <a href="#gemeinschaft">Gemeinschaft</a><a href="#leben">Studentenleben</a><a href="#kontakt">Kennenlernen</a><a href="#haus">Haus &amp; Zimmer</a><a href="#werte">Werte</a><a href="#geschichte">Geschichte</a><a class="nav-contact" href="#kontakt">Kontakt</a>
