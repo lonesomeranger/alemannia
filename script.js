@@ -2,10 +2,11 @@ const menuButton = document.querySelector(".menu-button");
 const navigation = document.querySelector("#navigation");
 const navigationLinks = [...navigation.querySelectorAll('a[href^="#"]')];
 
-const closeMenu = () => {
+const closeMenu = ({ restoreFocus = false } = {}) => {
   menuButton.setAttribute("aria-expanded", "false");
   menuButton.querySelector(".sr-only").textContent = "Menü öffnen";
   navigation.classList.remove("is-open");
+  if (restoreFocus) menuButton.focus();
 };
 
 menuButton.addEventListener("click", () => {
@@ -22,7 +23,9 @@ navigation.addEventListener("click", (event) => {
 });
 
 document.addEventListener("keydown", (event) => {
-  if (event.key === "Escape") closeMenu();
+  if (event.key === "Escape" && menuButton.getAttribute("aria-expanded") === "true") {
+    closeMenu({ restoreFocus: true });
+  }
 });
 
 window.addEventListener("resize", () => {

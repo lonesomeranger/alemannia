@@ -10,7 +10,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Newsreader:opsz,wght@6..72,500;6..72,600&family=Source+Sans+3:wght@400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=20260825-11">
+  <link rel="stylesheet" href="styles.css?v=20260826-12">
   <style>
     .brand { display: block; width: 365px; }
     .brand-wordmark { width: 100%; height: auto; }
@@ -122,23 +122,24 @@
       .room-offer-photo { min-height: 340px; }
     }
   </style>
-  <script src="script.js?v=20260826-2" defer></script>
+  <script src="script.js?v=20260826-3" defer></script>
 </head>
 <body>
+  <a class="skip-link" href="#main-content">Zum Inhalt springen</a>
   <header class="site-header">
     <a class="brand" href="#start" aria-label="Zur Startseite">
-      <img class="brand-wordmark" src="alemannia-wortmarke.png" alt="Braunschweiger Burschenschaft Alemannia, seit 1850">
+      <picture><source srcset="assets/wordmark-800.webp" type="image/webp"><img class="brand-wordmark" src="alemannia-wortmarke.png" width="1280" height="390" alt="Braunschweiger Burschenschaft Alemannia, seit 1850"></picture>
     </a>
-    <nav id="navigation" aria-label="Hauptnavigation">
-      <a href="#gemeinschaft">Gemeinschaft</a><a href="#leben">Studentenleben</a><a href="#kontakt">Kennenlernen</a><a href="#haus">Haus &amp; Zimmer</a><a href="#werte">Werte</a><a href="#geschichte">Geschichte</a><a class="nav-contact" href="#kontakt">Kontakt</a>
-    </nav>
-    <a class="header-crest" href="#geschichte" aria-label="Zur Geschichte der Alemannia"><img src="wappen-freigestellt.png" alt="Wappen der Braunschweiger Burschenschaft Alemannia"></a>
     <button class="menu-button" type="button" aria-expanded="false" aria-controls="navigation">
       <span></span><span></span><span class="sr-only">Menü öffnen</span>
     </button>
+    <nav id="navigation" aria-label="Hauptnavigation">
+      <a href="#gemeinschaft">Gemeinschaft</a><a href="#leben">Studentenleben</a><a href="#kontakt">Kennenlernen</a><a href="#haus">Haus &amp; Zimmer</a><a href="#werte">Werte</a><a href="#geschichte">Geschichte</a><a class="nav-contact" href="#kontakt">Kontakt</a>
+    </nav>
+    <a class="header-crest" href="#geschichte" aria-label="Zur Geschichte der Alemannia"><picture><source srcset="assets/wappen-480.webp" type="image/webp"><img src="wappen-freigestellt.png" width="1174" height="1433" alt="Wappen der Braunschweiger Burschenschaft Alemannia"></picture></a>
   </header>
 
-  <main>
+  <main id="main-content">
     <section class="hero" id="start" aria-labelledby="page-title">
       <div class="hero-copy">
         <p class="eyebrow">Per aspera ad astra</p>
@@ -155,18 +156,18 @@
     <section class="section community-section" id="gemeinschaft" aria-labelledby="gemeinschaft-title">
       <div class="section-heading"><p class="eyebrow">Gemeinschaft</p><h2 id="gemeinschaft-title">Zusammen studieren.<br>Zusammen wachsen.</h2></div>
       <div class="lead-columns"><p>Bei uns treffen Studenten unterschiedlicher Fachrichtungen, Semester und Persönlichkeiten aufeinander. Wir unterstützen uns bei Prüfungen, im Uni-Alltag und darüber hinaus. Das Studium steht dabei immer an erster Stelle.</p></div>
-      <div class="principles" aria-label="Was unsere Gemeinschaft ausmacht">
-        <article><span>01</span><h3>Studium</h3><p>Gemeinsam lernen, Wissen teilen und das eigene Ziel konsequent verfolgen.</p></article>
-        <article><span>02</span><h3>Freundschaft</h3><p>Gemeinsam eine gute Zeit haben und Freundschaften aufbauen, die weit über das Studium hinausreichen.</p></article>
-        <article><span>03</span><h3>Verantwortung</h3><p>Mitgestalten, Verantwortung übernehmen und füreinander einstehen.</p></article>
-        <article><span>04</span><h3>Tradition</h3><p>Gewachsene Werte kennen, kritisch prüfen und zeitgemäß weiterleben.</p></article>
+      <div class="principles" role="list" aria-label="Was unsere Gemeinschaft ausmacht">
+        <article role="listitem"><span>01</span><h3>Studium</h3><p>Gemeinsam lernen, Wissen teilen und das eigene Ziel konsequent verfolgen.</p></article>
+        <article role="listitem"><span>02</span><h3>Freundschaft</h3><p>Gemeinsam eine gute Zeit haben und Freundschaften aufbauen, die weit über das Studium hinausreichen.</p></article>
+        <article role="listitem"><span>03</span><h3>Verantwortung</h3><p>Mitgestalten, Verantwortung übernehmen und füreinander einstehen.</p></article>
+        <article role="listitem"><span>04</span><h3>Tradition</h3><p>Gewachsene Werte kennen, kritisch prüfen und zeitgemäß weiterleben.</p></article>
       </div>
     </section>
 
     <section class="section life-section" id="leben" aria-labelledby="leben-title">
       <div class="section-heading"><p class="eyebrow">Leben bei Alemannia</p><h2 id="leben-title">Studieren gehört dazu.<br>Das Studentenleben auch.</h2></div>
       <div class="section-text"><p>Ein Studium besteht aus mehr als Vorlesungen, Klausuren und Bibliothek.</p><p>Bei Alemannia wollen wir diese Jahre gemeinsam erleben. Wir kochen zusammen, grillen im Garten, schauen Fußball, veranstalten Film- und Spieleabende, feiern Partys und Kneipen und unternehmen gemeinsam Ausflüge und Reisen.</p><p>Mal ist das Haus voller Leute, mal sitzt man mit ein paar Freunden am Tresen. Vieles entsteht spontan aus der Gemeinschaft heraus.</p><p>Das Studium nehmen wir ernst. Genauso wichtig ist uns aber, dass aus diesen Jahren Erinnerungen und Freundschaften entstehen, die bleiben.</p></div>
-      <div class="photo-grid"><figure class="event-photo media-large"><img src="Ball.png" alt="Festlich gekleidete Mitglieder, Familien und Gäste gemeinsam im Garten"><figcaption>Gemeinschaft beim Ball</figcaption></figure><figure class="media-placeholder" role="img" aria-label="Platzhalter für einen gemeinsamen Abend am Tresen"><span>Foto fehlt</span><small>Gemeinsamer Abend am Tresen</small></figure><figure class="event-photo"><img src="Kommerz.png" alt="Teilnehmer eines Kommerses an langen, festlich gedeckten Tafeln"><figcaption>Kommers im Alemannenhaus</figcaption></figure></div>
+      <div class="photo-grid"><figure class="event-photo media-large"><picture><source srcset="assets/ball-720.webp 720w, assets/ball-1440.webp 1440w" sizes="(max-width: 900px) calc(100vw - 36px), 820px" type="image/webp"><img src="Ball.png" width="1536" height="1024" loading="lazy" decoding="async" alt="Festlich gekleidete Mitglieder, Familien und Gäste gemeinsam im Garten"></picture><figcaption>Gemeinschaft beim Ball</figcaption></figure><figure class="media-placeholder" role="img" aria-label="Platzhalter für einen gemeinsamen Abend am Tresen"><span>Foto fehlt</span><small>Gemeinsamer Abend am Tresen</small></figure><figure class="event-photo"><picture><source srcset="assets/kommerz-720.webp 720w, assets/kommerz-1440.webp 1440w" sizes="(max-width: 900px) calc(100vw - 36px), 400px" type="image/webp"><img src="Kommerz.png" width="1534" height="1025" loading="lazy" decoding="async" alt="Teilnehmer eines Kommerses an langen, festlich gedeckten Tafeln"></picture><figcaption>Kommers im Alemannenhaus</figcaption></figure></div>
     </section>
 
     <section class="section contact-section" id="kontakt" aria-labelledby="kontakt-title">
@@ -175,16 +176,16 @@
 
     <section class="section house-section" id="haus" aria-labelledby="haus-title">
       <div class="house-gallery">
-        <figure class="house-photo"><img src="Hausfront.png" alt="Das beleuchtete Alemannenhaus am Rebenring in der Abenddämmerung"><figcaption>Das Alemannenhaus am Rebenring</figcaption></figure>
-        <figure class="house-photo"><img src="garten.png" alt="Der begrünte Garten des Alemannenhauses mit Sitzgruppe, Esstisch und Grill"><figcaption>Unser Garten mit Grill- und Sitzbereich</figcaption></figure>
-        <figure class="house-photo"><img src="gemeinschaftszimmer.png" alt="Der helle Gemeinschaftsraum im Alemannenhaus mit Sofas und großem Esstisch"><figcaption>Gemeinschaftsraum</figcaption></figure>
+        <figure class="house-photo"><picture><source srcset="assets/hausfront-720.webp 720w, assets/hausfront-1440.webp 1440w" sizes="(max-width: 900px) calc(100vw - 36px), 1240px" type="image/webp"><img src="Hausfront.png" width="1537" height="1023" loading="lazy" decoding="async" alt="Das beleuchtete Alemannenhaus am Rebenring in der Abenddämmerung"></picture><figcaption>Das Alemannenhaus am Rebenring</figcaption></figure>
+        <figure class="house-photo"><picture><source srcset="assets/garten-720.webp 720w, assets/garten-1440.webp 1440w" sizes="(max-width: 600px) calc(100vw - 24px), 610px" type="image/webp"><img src="garten.png" width="1448" height="1086" loading="lazy" decoding="async" alt="Der begrünte Garten des Alemannenhauses mit Sitzgruppe, Esstisch und Grill"></picture><figcaption>Unser Garten mit Grill- und Sitzbereich</figcaption></figure>
+        <figure class="house-photo"><picture><source srcset="assets/gemeinschaftszimmer-720.webp 720w, assets/gemeinschaftszimmer-1440.webp 1440w" sizes="(max-width: 600px) calc(100vw - 24px), 610px" type="image/webp"><img src="gemeinschaftszimmer.png" width="1445" height="1088" loading="lazy" decoding="async" alt="Der helle Gemeinschaftsraum im Alemannenhaus mit Sofas und großem Esstisch"></picture><figcaption>Gemeinschaftsraum</figcaption></figure>
       </div>
       <div class="house-copy"><p class="eyebrow">Unser Zuhause in Braunschweig</p><h2 id="haus-title">Mitten im Univiertel zuhause.</h2><p>Das Alemannenhaus am Rebenring ist der Mittelpunkt unseres Bundeslebens.</p><p>Hier wird gewohnt, gelernt, gekocht, diskutiert und gefeiert. Neben den Studentenzimmern bietet das Haus eine große Küche, Gemeinschaftsräume und einen Garten mit Grillmöglichkeit.</p><p>Der Hauptcampus der TU Braunschweig liegt nur wenige Minuten zu Fuß entfernt, die Innenstadt ist mit dem Fahrrad schnell erreichbar.</p></div>
-      <div class="room-offer"><div class="room-offer-copy"><p class="eyebrow">Zimmer frei?</p><h3>Wohnen direkt an der Uni.</h3><p>Du suchst ein Zimmer in Braunschweig und möchtest nicht nur irgendwo wohnen?</p><p>Bei uns lebst du mit Studenten verschiedener Fachrichtungen zusammen. Neben deinem eigenen Zimmer stehen eine große Küche, Gemeinschaftsräume und ein Garten zur Verfügung. Der Hauptcampus der TU liegt praktisch vor der Haustür.</p><div class="button-row"><a class="button button-primary" href="mailto:aktivitas@burschenschaftalemannia.de?subject=Freies%20Zimmer">Freie Zimmer ansehen</a><a class="button button-link" href="https://www.wg-gesucht.de/wg-zimmer-in-Braunschweig-Univiertel.6372466.html">WG auf WG-Gesucht ansehen</a></div></div><figure class="room-offer-photo"><img src="zimmer1.png" alt="Helles möbliertes Studentenzimmer mit Bett, Schreibtisch und Kleiderschrank"></figure></div>
+      <div class="room-offer"><div class="room-offer-copy"><p class="eyebrow">Zimmer frei?</p><h3>Wohnen direkt an der Uni.</h3><p>Du suchst ein Zimmer in Braunschweig und möchtest nicht nur irgendwo wohnen?</p><p>Bei uns lebst du mit Studenten verschiedener Fachrichtungen zusammen. Neben deinem eigenen Zimmer stehen eine große Küche, Gemeinschaftsräume und ein Garten zur Verfügung. Der Hauptcampus der TU liegt praktisch vor der Haustür.</p><div class="button-row"><a class="button button-primary" href="mailto:aktivitas@burschenschaftalemannia.de?subject=Freies%20Zimmer">Freie Zimmer ansehen</a><a class="button button-link" href="https://www.wg-gesucht.de/wg-zimmer-in-Braunschweig-Univiertel.6372466.html">WG auf WG-Gesucht ansehen</a></div></div><figure class="room-offer-photo"><picture><source srcset="assets/zimmer-720.webp 720w, assets/zimmer-1440.webp 1440w" sizes="(max-width: 900px) calc(100vw - 76px), 610px" type="image/webp"><img src="zimmer1.png" width="1448" height="1086" loading="lazy" decoding="async" alt="Helles möbliertes Studentenzimmer mit Bett, Schreibtisch und Kleiderschrank"></picture></figure></div>
     </section>
 
     <section class="section values-section" id="werte" aria-labelledby="werte-title">
-      <div class="section-heading"><p class="eyebrow">Wofür wir stehen</p><h2 id="werte-title">Ehre. Freiheit. Vaterland.</h2><p class="section-intro">Unser Wahlspruch verbindet uns mit der Geschichte der burschenschaftlichen Bewegung. Für uns sind Ehre, Freiheit und Vaterland aber keine Begriffe aus dem Museum. Entscheidend ist, was sie heute bedeuten.</p><img class="values-zirkel" src="Zirkel_alt_klein.png" alt="Originaler Zirkel der Alemannia"></div>
+      <div class="section-heading"><p class="eyebrow">Wofür wir stehen</p><h2 id="werte-title">Ehre. Freiheit. Vaterland.</h2><p class="section-intro">Unser Wahlspruch verbindet uns mit der Geschichte der burschenschaftlichen Bewegung. Für uns sind Ehre, Freiheit und Vaterland aber keine Begriffe aus dem Museum. Entscheidend ist, was sie heute bedeuten.</p><picture><source srcset="assets/zirkel-620.webp" type="image/webp"><img class="values-zirkel" src="Zirkel_alt_klein.png" width="1000" height="1211" loading="lazy" decoding="async" alt="Originaler Zirkel der Alemannia"></picture></div>
       <div class="value-columns"><article><span>01</span><h3>Ehre</h3><p>Ehrlich und verlässlich handeln, Verantwortung für das eigene Verhalten übernehmen und anderen mit Respekt begegnen.</p></article><article><span>02</span><h3>Freiheit</h3><p>Die eigene Persönlichkeit entfalten, selbstständig denken und die eigene Meinung frei vertreten können – verbunden mit Verantwortung für die eigenen Entscheidungen.</p></article><article><span>03</span><h3>Vaterland</h3><p>Verbundenheit mit Deutschland, seiner Geschichte, Kultur und Gesellschaft – und die Bereitschaft, Verantwortung für seine Gegenwart und Zukunft zu übernehmen.</p><p class="fine-print">Die Verbundenheit mit dem eigenen Land bedeutet für uns keine Abwertung anderer Länder, Kulturen oder Menschen.</p></article></div>
     </section>
 
@@ -214,7 +215,7 @@
   </main>
 
   <footer>
-    <div class="footer-brand"><img src="Zirkel_alt_klein.png" alt="Originaler Zirkel der Alemannia"><strong>Braunschweiger Burschenschaft Alemannia</strong><span>Seit 1850</span></div>
+    <div class="footer-brand"><picture><source srcset="assets/zirkel-620.webp" type="image/webp"><img src="Zirkel_alt_klein.png" width="1000" height="1211" loading="lazy" decoding="async" alt="Originaler Zirkel der Alemannia"></picture><strong>Braunschweiger Burschenschaft Alemannia</strong><span>Seit 1850</span></div>
     <div><h3>Kontakt</h3><address>Rebenring 28<br>38106 Braunschweig</address><a href="mailto:aktivitas@burschenschaftalemannia.de">aktivitas@burschenschaftalemannia.de</a></div>
     <div><h3>Navigation</h3><div class="footer-links"><a href="#gemeinschaft">Gemeinschaft</a><a href="#leben">Studentenleben</a><a href="#kontakt">Kennenlernen</a><a href="#haus">Haus &amp; Zimmer</a><a href="#werte">Werte</a><a href="#geschichte">Geschichte</a><a href="#kontakt">Kontakt</a></div></div>
     <div><h3>Rechtliches</h3><div class="footer-links"><a href="https://www.alemannia-braunschweig.eu/impressum">Impressum</a><a href="https://www.alemannia-braunschweig.eu/datenschutz/">Datenschutz</a></div></div>

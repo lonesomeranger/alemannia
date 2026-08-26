@@ -27,9 +27,13 @@ jobs:
           test -s index.html
           test -s styles.css
           test -s script.js
+          test "$(find assets -type f -name '*.webp' | wc -l)" -eq 15
+          node --check script.js
+          node tools/check-site.mjs
           grep -q '<html lang="de">' index.html
           grep -q '<title>Braunschweiger Burschenschaft Alemannia</title>' index.html
           grep -q 'id="kontakt"' index.html
+          grep -q 'class="skip-link"' index.html
 
   deploy:
     if: github.event_name != 'pull_request'
@@ -53,7 +57,8 @@ jobs:
         shell: bash
         run: |
           mkdir _site
-          cp index.html styles.css script.js CNAME *.png _site/
+          cp index.html styles.css script.js CNAME favicon.png apple-touch-icon.png alemannia-wortmarke.png wappen-freigestellt.png Ball.png Kommerz.png Hausfront.png garten.png gemeinschaftszimmer.png zimmer1.png Zirkel_alt_klein.png _site/
+          cp -R assets _site/
           touch _site/.nojekyll
 
       - name: Upload Pages artifact
