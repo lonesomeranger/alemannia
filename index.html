@@ -10,7 +10,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Newsreader:opsz,wght@6..72,500;6..72,600&family=Source+Sans+3:wght@400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=20260826-12">
+  <link rel="stylesheet" href="styles.css?v=20260826-13">
   <style>
     .brand { display: block; width: 365px; }
     .brand-wordmark { width: 100%; height: auto; }
@@ -19,7 +19,7 @@
     .photo-grid { grid-template-rows: repeat(2, 305px); gap: 10px; }
     .photo-grid .media-large { min-height: 620px; }
     .photo-grid > :not(.media-large) { min-height: 305px; }
-    .values-section { padding-block: clamp(84px, 10vw, 150px); }
+    .values-section { padding-block: clamp(64px, 6vw, 96px) clamp(84px, 10vw, 150px); border-top: 1px solid var(--line); }
     .values-section .section-heading { position: relative; padding-right: min(32vw, 350px); }
     .values-zirkel { position: absolute; top: 0; right: 0; width: min(27vw, 310px); height: auto; max-height: none; object-fit: contain; }
     .value-columns { gap: clamp(50px, 7vw, 96px); margin-top: 86px; }
@@ -53,7 +53,7 @@
     .history-closing strong, .history-closing small { display: block; }
     .history-closing strong { max-width: 980px; font-family: "Cormorant Garamond", serif; font-size: clamp(34px, 4vw, 56px); line-height: 1.08; }
     .history-closing small { margin-top: 16px; color: var(--muted); font-size: 14px; }
-    .house-section { display: block; padding: clamp(64px, 8vw, 120px) clamp(20px, 5vw, 76px); }
+    .house-section { display: block; padding: clamp(64px, 8vw, 120px) max(20px, calc((100% - 1480px) / 2)) clamp(32px, 4vw, 56px); }
     .house-gallery { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; max-width: 1480px; margin: 0 auto 72px; }
     .house-photo { position: relative; aspect-ratio: 4 / 3; overflow: hidden; background: var(--blue); }
     .house-photo:first-child { grid-column: 1 / -1; aspect-ratio: 2 / 1; }

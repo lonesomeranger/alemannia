@@ -80,7 +80,7 @@ h3 { margin-bottom: 12px; font-size: 28px; }
 .split-copy { max-width: 650px; }
 .portrait-media { min-height: 620px; }
 .bond-section { border-top: 1px solid var(--line); }
-.house-section { display: grid; grid-template-columns: 1.05fr .95fr; min-height: 620px; background: var(--soft); }
+.house-section { display: grid; grid-template-columns: 1.05fr .95fr; width: 100%; max-width: none; min-height: 620px; background: var(--soft); }
 .house-mark { display: flex; flex-direction: column; justify-content: center; padding: 70px; color: white; background: var(--ink); }
 .house-mark span, .house-mark small { font-size: 11px; letter-spacing: .12em; text-transform: uppercase; }
 .house-mark strong { margin-block: 20px; font-family: "Newsreader", serif; font-size: clamp(100px, 14vw, 190px); font-weight: 500; line-height: .85; }
