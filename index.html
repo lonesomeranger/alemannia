@@ -19,11 +19,12 @@
     .photo-grid { grid-template-rows: repeat(2, 305px); gap: 10px; }
     .photo-grid .media-large { min-height: 620px; }
     .photo-grid > :not(.media-large) { min-height: 305px; }
-    .values-section { position: relative; padding-block: clamp(88px, 8vw, 126px) clamp(84px, 10vw, 150px); color: #fff; background: var(--blue); border-top: 0; }
+    .values-section { position: relative; padding-block: clamp(88px, 8vw, 126px) clamp(84px, 10vw, 150px); color: #f8f4ec; background: #24231f; border-top: 0; }
     .values-section::before { position: absolute; top: 0; right: 0; left: 0; height: 7px; background: linear-gradient(90deg, var(--ink) 0 33.333%, var(--gold) 33.333% 66.666%, var(--red) 66.666% 100%); content: ""; }
     .values-section .section-heading { position: relative; padding-right: min(32vw, 350px); }
-    .values-section .section-intro, .values-section .value-columns p { color: #d9e2ed; }
-    .values-zirkel { position: absolute; top: -26px; right: 0; width: min(27vw, 310px); height: auto; max-height: none; padding: 28px 34px; object-fit: contain; background: #fbf7ee; box-shadow: 18px 18px 0 rgba(8, 25, 49, .32); }
+    .values-section .eyebrow, .values-section .value-columns span { color: #d0ad59; }
+    .values-section .section-intro, .values-section .value-columns p { color: #d7d2c8; }
+    .values-zirkel { position: absolute; top: -24px; right: 18px; width: min(25vw, 285px); height: auto; max-height: none; object-fit: contain; filter: invert(1); opacity: .92; }
     .value-columns { gap: clamp(50px, 7vw, 96px); margin-top: 86px; }
     .value-columns article { padding-top: 28px; border-top: 1px solid rgba(211, 176, 89, .78); }
     .value-columns span { display: block; margin-bottom: 15px; color: var(--gold); font-size: 12px; font-weight: 600; }
