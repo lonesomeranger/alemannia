@@ -51,3 +51,42 @@ const sectionObserver = new IntersectionObserver((entries) => {
 }, { rootMargin: "-25% 0px -60%", threshold: [0, .2, .5] });
 
 observedSections.forEach((section) => sectionObserver.observe(section));
+
+const revealableHousePhotos = [...document.querySelectorAll(".house-photo-reveal")];
+const hasPersistentPhotoReveal = window.matchMedia("(hover: none)");
+
+const loadOriginalPhoto = (photo) => {
+  if (photo.classList.contains("is-original-loading") || photo.classList.contains("is-original-ready")) return;
+
+  photo.classList.add("is-original-loading");
+  const original = new Image();
+  original.className = "house-photo-original";
+  original.alt = "";
+  original.width = 4080;
+  original.height = 3072;
+  original.decoding = "async";
+  original.sizes = photo.dataset.originalSizes;
+  original.srcset = photo.dataset.originalSrcset;
+  original.src = photo.dataset.originalSrc;
+
+  original.addEventListener("load", () => {
+    photo.classList.remove("is-original-loading");
+    photo.classList.add("is-original-ready");
+  }, { once: true });
+  original.addEventListener("error", () => {
+    photo.classList.remove("is-original-loading");
+    original.remove();
+  }, { once: true });
+
+  photo.insertBefore(original, photo.querySelector("figcaption"));
+};
+
+revealableHousePhotos.forEach((photo) => {
+  photo.addEventListener("pointerenter", () => loadOriginalPhoto(photo), { once: true });
+  photo.addEventListener("focus", () => loadOriginalPhoto(photo), { once: true });
+  photo.addEventListener("click", () => {
+    if (!hasPersistentPhotoReveal.matches) return;
+    loadOriginalPhoto(photo);
+    photo.classList.toggle("is-original-visible");
+  });
+});

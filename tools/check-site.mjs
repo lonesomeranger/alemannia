@@ -49,6 +49,8 @@ for (const [pageName, html] of pages) {
 const indexHtml = pages.get("index.html");
 check(indexHtml.includes('class="principles" role="list"'), "index.html: principles container must expose list semantics.");
 check((indexHtml.match(/role="listitem"/g) || []).length === 4, "index.html: every principle must expose list-item semantics.");
+check((indexHtml.match(/class="house-photo house-photo-reveal"/g) || []).length === 3, "index.html: all three house photos must support original-image reveal.");
+check((indexHtml.match(/data-original-srcset=/g) || []).length === 3, "index.html: every house photo must provide a responsive original source.");
 check(/\.house-gallery \{[^}]*max-width: 1240px;/.test(indexHtml), "index.html: house gallery must align to the 1240px content grid.");
 check(/\.room-offer \{[^}]*max-width: 1240px;/.test(indexHtml), "index.html: room offer must align to the 1240px content grid.");
 check(css.includes("--mobile-crest-space: 120px"), "Mobile header must reserve space for the crest.");

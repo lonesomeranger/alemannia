@@ -31,7 +31,7 @@ jobs:
           test -s styles.css
           test -s pages.css
           test -s script.js
-          test "$(find assets -type f -name '*.webp' | wc -l)" -eq 15
+          test "$(find assets -type f -name '*.webp' | wc -l)" -eq 21
           node --check script.js
           node tools/check-site.mjs
           grep -q '<html lang="de">' index.html

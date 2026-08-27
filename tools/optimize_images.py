@@ -13,6 +13,9 @@ PHOTOS = {
     "garten.png": "garten",
     "gemeinschaftszimmer.png": "gemeinschaftszimmer",
     "zimmer1.png": "zimmer",
+    "PXL_20260614_052443873.jpg": "hausfront-original",
+    "PXL_20260613_085346785(1).jpg": "garten-original",
+    "PXL_20260613_082859878.MP(1).jpg": "gemeinschaftszimmer-original",
 }
 
 GRAPHICS = {
