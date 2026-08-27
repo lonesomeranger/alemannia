@@ -57,15 +57,15 @@
     .history-closing strong, .history-closing small { display: block; }
     .history-closing strong { max-width: 980px; font-family: "Cormorant Garamond", serif; font-size: clamp(34px, 4vw, 56px); line-height: 1.08; }
     .history-closing small { margin-top: 16px; color: var(--muted); font-size: 14px; }
-    .house-section { display: block; padding: clamp(64px, 8vw, 120px) max(20px, calc((100% - 1480px) / 2)) clamp(96px, 9vw, 140px); background: var(--paper); }
-    .house-gallery { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; max-width: 1480px; margin: 0 auto 72px; }
+    .house-section { display: block; padding: clamp(64px, 8vw, 120px) max(32px, calc((100% - 1240px) / 2)) clamp(96px, 9vw, 140px); background: var(--paper); }
+    .house-gallery { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; max-width: 1240px; margin: 0 auto 72px; }
     .house-photo { position: relative; aspect-ratio: 4 / 3; overflow: hidden; background: var(--charcoal); }
     .house-photo:first-child { grid-column: 1 / -1; aspect-ratio: 2 / 1; }
     .house-photo img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center; transition: transform .6s ease; }
     .house-photo:hover img { transform: scale(1.02); }
     .house-photo figcaption { position: absolute; right: 0; bottom: 0; left: 0; padding: 44px 22px 18px; background: linear-gradient(transparent, rgba(9, 18, 34, .78)); color: #fff; font-family: "Source Sans 3", sans-serif; font-size: 14px; font-weight: 600; }
     .house-copy { max-width: 920px; margin: 0 auto; padding: 0; }
-    .room-offer { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(42px, 7vw, 96px); align-items: center; max-width: 1480px; margin: 100px auto 0; padding: clamp(38px, 6vw, 80px); background: #fbf7ee; }
+    .room-offer { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(42px, 7vw, 96px); align-items: center; max-width: 1240px; margin: 100px auto 0; padding: clamp(38px, 6vw, 80px); background: #fbf7ee; }
     .room-offer-copy h3 { font-size: clamp(46px, 5vw, 70px); }
     .room-offer-photo { position: relative; min-height: 560px; overflow: hidden; }
     .room-offer-photo img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
@@ -110,6 +110,7 @@
       .history-era-labels { display: none; }
       .history-closing { min-width: 0; overflow-wrap: anywhere; }
       .history-pair { gap: 64px; }
+      .house-section { padding-inline: 18px; }
       .house-gallery { margin-bottom: 56px; }
       .room-offer { grid-template-columns: 1fr; }
       .room-offer-photo { min-height: 460px; }
