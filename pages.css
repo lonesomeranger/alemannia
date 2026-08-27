@@ -31,7 +31,6 @@
 .timeline-copy p:last-child { margin-bottom: 0; }
 .timeline-item.is-dark .timeline-marker { background: var(--ink); box-shadow: 0 0 0 1px var(--ink); }
 .timeline-item.is-red .timeline-marker { background: var(--red); box-shadow: 0 0 0 1px var(--red); }
-.timeline-source { max-width: 760px; margin: 80px 0 0 230px; padding-top: 24px; border-top: 1px solid var(--line); color: var(--muted); font-size: 13px; }
 .page-cta { display: flex; flex-wrap: wrap; gap: 24px; align-items: center; justify-content: space-between; margin-bottom: clamp(80px, 10vw, 140px); padding: clamp(34px, 5vw, 62px); color: #f8f4ec; background: var(--charcoal); }
 .page-cta h2 { max-width: 700px; margin: 0; font-size: clamp(38px, 4vw, 58px); }
 .page-cta .button-row { margin: 0; }
@@ -79,7 +78,6 @@
   .timeline-year { font-size: 31px; }
   .timeline-marker { width: 13px; height: 13px; margin-top: 6px; }
   .timeline-copy { padding-left: 16px; }
-  .timeline-source { margin-left: 98px; }
   .legal-layout { grid-template-columns: 1fr; }
   .legal-nav { position: static; flex-direction: row; flex-wrap: wrap; }
   .legal-nav a { border-top: 2px solid var(--line); border-left: 0; }
@@ -100,7 +98,6 @@
   .timeline-year { padding-top: 4px; font-size: 24px; }
   .timeline-copy { padding-left: 10px; }
   .timeline-copy h3 { font-size: 29px; overflow-wrap: anywhere; }
-  .timeline-source { margin: 62px 0 0 78px; }
   .page-cta { align-items: stretch; }
   .page-cta .button-row { flex-direction: column; width: 100%; }
   .legal-layout { padding-block: 64px; }
