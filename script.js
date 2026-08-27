@@ -84,9 +84,10 @@ const loadOriginalPhoto = (photo) => {
 revealableHousePhotos.forEach((photo) => {
   photo.addEventListener("pointerenter", () => loadOriginalPhoto(photo), { once: true });
   photo.addEventListener("focus", () => loadOriginalPhoto(photo), { once: true });
-  photo.addEventListener("click", () => {
-    if (!hasPersistentPhotoReveal.matches) return;
+  photo.addEventListener("pointerup", (event) => {
+    if (!hasPersistentPhotoReveal.matches || event.pointerType === "mouse") return;
     loadOriginalPhoto(photo);
     photo.classList.toggle("is-original-visible");
   });
+  photo.addEventListener("blur", () => photo.classList.remove("is-original-visible"));
 });
