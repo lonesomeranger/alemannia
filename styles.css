@@ -11,7 +11,7 @@ figure { margin: 0; }
 .site-header, main > section, footer { width: min(1240px, calc(100% - 64px)); margin-inline: auto; }
 main > section { scroll-margin-top: 190px; }
 main > section > * { min-width: 0; }
-.site-header { position: fixed; z-index: 20; top: 0; left: 50%; display: grid; grid-template-columns: auto 1fr auto; gap: 32px; align-items: center; min-height: 142px; border-bottom: 1px solid var(--line); background: rgba(255, 255, 255, .94); box-shadow: 0 10px 30px rgba(21, 21, 21, .04); backdrop-filter: blur(14px); transform: translateX(-50%); }
+.site-header { position: fixed; z-index: 20; top: 0; left: 50%; display: grid; grid-template-columns: auto 1fr auto; gap: 32px; align-items: center; min-height: 142px; border-bottom: 1px solid var(--line); background: var(--paper); box-shadow: 0 10px 30px rgba(21, 21, 21, .04); transform: translateX(-50%); }
 .site-header::before { position: absolute; z-index: -1; inset: 0 50%; width: 100vw; background: inherit; border-bottom: inherit; content: ""; transform: translateX(-50%); }
 .brand { display: block; text-decoration: none; }
 .brand-wordmark { display: block; }
