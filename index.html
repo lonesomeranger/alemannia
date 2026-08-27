@@ -10,7 +10,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Newsreader:opsz,wght@6..72,500;6..72,600&family=Source+Sans+3:wght@400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=20260826-13">
+  <link rel="stylesheet" href="styles.css?v=20260827-2">
   <style>
     .brand { display: block; width: 365px; }
     .brand-wordmark { width: 100%; height: auto; }
@@ -19,11 +19,11 @@
     .photo-grid { grid-template-rows: repeat(2, 305px); gap: 10px; }
     .photo-grid .media-large { min-height: 620px; }
     .photo-grid > :not(.media-large) { min-height: 305px; }
-    .values-section { position: relative; padding-block: clamp(88px, 8vw, 126px) clamp(84px, 10vw, 150px); color: #f8f4ec; background: #24231f; border-top: 0; }
+    .values-section { position: relative; padding-block: clamp(88px, 8vw, 126px) clamp(84px, 10vw, 150px); color: #f8f4ec; background: var(--charcoal); border-top: 0; }
     .values-section::before { position: absolute; top: 0; right: 0; left: 0; height: 7px; background: linear-gradient(90deg, var(--ink) 0 33.333%, var(--gold) 33.333% 66.666%, var(--red) 66.666% 100%); content: ""; }
     .values-section .section-heading { position: relative; padding-right: min(32vw, 350px); }
     .values-section .eyebrow, .values-section .value-columns span { color: #d0ad59; }
-    .values-section .section-intro, .values-section .value-columns p { color: #d7d2c8; }
+    .values-section .section-intro, .values-section .value-columns p { color: var(--warm-muted); }
     .values-zirkel { position: absolute; top: -24px; right: 18px; width: min(25vw, 285px); height: auto; max-height: none; object-fit: contain; filter: invert(1); opacity: .92; }
     .value-columns { gap: clamp(50px, 7vw, 96px); margin-top: 86px; }
     .value-columns article { padding-top: 28px; border-top: 1px solid rgba(211, 176, 89, .78); }
@@ -59,7 +59,7 @@
     .history-closing small { margin-top: 16px; color: var(--muted); font-size: 14px; }
     .house-section { display: block; padding: clamp(64px, 8vw, 120px) max(20px, calc((100% - 1480px) / 2)) clamp(96px, 9vw, 140px); background: var(--paper); }
     .house-gallery { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; max-width: 1480px; margin: 0 auto 72px; }
-    .house-photo { position: relative; aspect-ratio: 4 / 3; overflow: hidden; background: var(--blue); }
+    .house-photo { position: relative; aspect-ratio: 4 / 3; overflow: hidden; background: var(--charcoal); }
     .house-photo:first-child { grid-column: 1 / -1; aspect-ratio: 2 / 1; }
     .house-photo img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center; transition: transform .6s ease; }
     .house-photo:hover img { transform: scale(1.02); }
@@ -69,7 +69,7 @@
     .room-offer-copy h3 { font-size: clamp(46px, 5vw, 70px); }
     .room-offer-photo { position: relative; min-height: 560px; overflow: hidden; }
     .room-offer-photo img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
-    .event-photo { position: relative; min-height: 280px; overflow: hidden; background: var(--blue); }
+    .event-photo { position: relative; min-height: 280px; overflow: hidden; background: var(--charcoal); }
     .event-photo img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center; }
     .event-photo figcaption { position: absolute; right: 0; bottom: 0; left: 0; padding: 44px 20px 16px; background: linear-gradient(transparent, rgba(9, 18, 34, .82)); color: #fff; font-size: 14px; font-weight: 600; }
     .contact-section { grid-template-columns: minmax(0, 820px); }

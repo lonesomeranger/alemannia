@@ -33,7 +33,7 @@
 .timeline-item.is-red .timeline-marker { background: var(--red); box-shadow: 0 0 0 1px var(--red); }
 .timeline-item.is-today .timeline-copy { padding: 30px; background: var(--soft); border-left: 3px solid var(--gold); }
 .timeline-source { max-width: 760px; margin: 80px 0 0 230px; padding-top: 24px; border-top: 1px solid var(--line); color: var(--muted); font-size: 13px; }
-.page-cta { display: flex; flex-wrap: wrap; gap: 24px; align-items: center; justify-content: space-between; margin-bottom: clamp(80px, 10vw, 140px); padding: clamp(34px, 5vw, 62px); color: white; background: var(--blue); }
+.page-cta { display: flex; flex-wrap: wrap; gap: 24px; align-items: center; justify-content: space-between; margin-bottom: clamp(80px, 10vw, 140px); padding: clamp(34px, 5vw, 62px); color: #f8f4ec; background: var(--charcoal); }
 .page-cta h2 { max-width: 700px; margin: 0; font-size: clamp(38px, 4vw, 58px); }
 .page-cta .button-row { margin: 0; }
 .legal-hero { grid-template-columns: 1fr; }
