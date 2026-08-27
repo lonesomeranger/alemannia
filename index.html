@@ -19,13 +19,16 @@
     .photo-grid { grid-template-rows: repeat(2, 305px); gap: 10px; }
     .photo-grid .media-large { min-height: 620px; }
     .photo-grid > :not(.media-large) { min-height: 305px; }
-    .values-section { padding-block: clamp(64px, 6vw, 96px) clamp(84px, 10vw, 150px); border-top: 1px solid var(--line); }
+    .values-section { position: relative; padding-block: clamp(88px, 8vw, 126px) clamp(84px, 10vw, 150px); color: #fff; background: var(--blue); border-top: 0; }
+    .values-section::before { position: absolute; top: 0; right: 0; left: 0; height: 7px; background: linear-gradient(90deg, var(--ink) 0 33.333%, var(--gold) 33.333% 66.666%, var(--red) 66.666% 100%); content: ""; }
     .values-section .section-heading { position: relative; padding-right: min(32vw, 350px); }
-    .values-zirkel { position: absolute; top: 0; right: 0; width: min(27vw, 310px); height: auto; max-height: none; object-fit: contain; }
+    .values-section .section-intro, .values-section .value-columns p { color: #d9e2ed; }
+    .values-zirkel { position: absolute; top: -26px; right: 0; width: min(27vw, 310px); height: auto; max-height: none; padding: 28px 34px; object-fit: contain; background: #fbf7ee; box-shadow: 18px 18px 0 rgba(8, 25, 49, .32); }
     .value-columns { gap: clamp(50px, 7vw, 96px); margin-top: 86px; }
-    .value-columns article { padding-top: 28px; border-top: 1px solid var(--gold); }
+    .value-columns article { padding-top: 28px; border-top: 1px solid rgba(211, 176, 89, .78); }
     .value-columns span { display: block; margin-bottom: 15px; color: var(--gold); font-size: 12px; font-weight: 600; }
-    .value-columns h3 { margin-bottom: 22px; font-size: clamp(46px, 5vw, 70px); line-height: .95; }
+    .value-columns h3 { margin-bottom: 22px; color: #fff; font-size: clamp(46px, 5vw, 70px); line-height: .95; }
+    .values-section .fine-print { border-top-color: rgba(255, 255, 255, .25); }
     .discussion-section, .bond-section { align-items: stretch; gap: clamp(48px, 7vw, 100px); }
     .discussion-section .split-copy, .bond-section .split-copy { padding-block: 36px; }
     .discussion-section blockquote { margin: 50px 0; padding: 30px 0; border-block: 1px solid var(--gold); color: var(--blue); font-family: "Cormorant Garamond", serif; font-size: clamp(44px, 5vw, 72px); font-weight: 600; line-height: 1; }
@@ -53,7 +56,7 @@
     .history-closing strong, .history-closing small { display: block; }
     .history-closing strong { max-width: 980px; font-family: "Cormorant Garamond", serif; font-size: clamp(34px, 4vw, 56px); line-height: 1.08; }
     .history-closing small { margin-top: 16px; color: var(--muted); font-size: 14px; }
-    .house-section { display: block; padding: clamp(64px, 8vw, 120px) max(20px, calc((100% - 1480px) / 2)) clamp(32px, 4vw, 56px); }
+    .house-section { display: block; padding: clamp(64px, 8vw, 120px) max(20px, calc((100% - 1480px) / 2)) clamp(96px, 9vw, 140px); background: var(--paper); }
     .house-gallery { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; max-width: 1480px; margin: 0 auto 72px; }
     .house-photo { position: relative; aspect-ratio: 4 / 3; overflow: hidden; background: var(--blue); }
     .house-photo:first-child { grid-column: 1 / -1; aspect-ratio: 2 / 1; }
@@ -209,7 +212,7 @@
         <article><strong>1873</strong><h3>Burschenschaft Alemannia</h3><p>Am 10. November 1873 wurde aus einem Braunschweiger Fechtverein die <b>Burschenschaft Alemannia</b> gestiftet.</p><p>Sie führte die Farben Schwarz, Gold und Rot und den Wahlspruch <b>Ehre. Freiheit. Vaterland.</b> Hinzu kam unser Wappenspruch <b>Per aspera ad astra.</b></p><figure class="media-placeholder history-media" role="img" aria-label="Platzhalter für historisches Material ab 1873"><span>Historisches Material fehlt</span><small>Burschenschaft Alemannia ab 1873</small></figure></article>
       </div>
       <div class="history-closing"><strong>Seit 1850. In Braunschweig verwurzelt. Burschenschaftlichen Idealen verbunden.</strong><small>Von Generation zu Generation weitergetragen.</small></div>
-      <a class="text-link" href="https://www.alemannia-braunschweig.eu/unsere-geschichte/">Unsere Geschichte entdecken <span aria-hidden="true">→</span></a>
+      <a class="text-link" href="geschichte.html">Die ganze Geschichte im Zeitstrahl <span aria-hidden="true">→</span></a>
     </section>
 
   </main>
@@ -217,8 +220,8 @@
   <footer>
     <div class="footer-brand"><picture><source srcset="assets/zirkel-620.webp" type="image/webp"><img src="Zirkel_alt_klein.png" width="1000" height="1211" loading="lazy" decoding="async" alt="Originaler Zirkel der Alemannia"></picture><strong>Braunschweiger Burschenschaft Alemannia</strong><span>Seit 1850</span></div>
     <div><h3>Kontakt</h3><address>Rebenring 28<br>38106 Braunschweig</address><a href="mailto:aktivitas@burschenschaftalemannia.de">aktivitas@burschenschaftalemannia.de</a></div>
-    <div><h3>Navigation</h3><div class="footer-links"><a href="#gemeinschaft">Gemeinschaft</a><a href="#leben">Studentenleben</a><a href="#kontakt">Kennenlernen</a><a href="#haus">Haus &amp; Zimmer</a><a href="#werte">Werte</a><a href="#geschichte">Geschichte</a><a href="#kontakt">Kontakt</a></div></div>
-    <div><h3>Rechtliches</h3><div class="footer-links"><a href="https://www.alemannia-braunschweig.eu/impressum">Impressum</a><a href="https://www.alemannia-braunschweig.eu/datenschutz/">Datenschutz</a></div></div>
+    <div><h3>Navigation</h3><div class="footer-links"><a href="#gemeinschaft">Gemeinschaft</a><a href="#leben">Studentenleben</a><a href="#kontakt">Kennenlernen</a><a href="#haus">Haus &amp; Zimmer</a><a href="#werte">Werte</a><a href="geschichte.html">Geschichte</a><a href="#kontakt">Kontakt</a></div></div>
+    <div><h3>Rechtliches</h3><div class="footer-links"><a href="impressum.html">Impressum</a><a href="datenschutz.html">Datenschutz</a></div></div>
   </footer>
 </body>
 </html>

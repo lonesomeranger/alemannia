@@ -1,6 +1,6 @@
 # Alemannia CI test site
 
-A dependency-free static fixture deployed to GitHub Pages by GitHub Actions.
+A dependency-free static website deployed to GitHub Pages by GitHub Actions. The focused one-page homepage is complemented by an internal history timeline and legal pages.
 
 Production: <https://burschenschaftalemannia.de/>
 
