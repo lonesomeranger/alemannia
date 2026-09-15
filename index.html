@@ -10,7 +10,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Newsreader:opsz,wght@6..72,500;6..72,600&family=Source+Sans+3:wght@400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=20260915-2">
+  <link rel="stylesheet" href="styles.css?v=20260915-3">
   <style>
     .brand { display: block; width: 365px; }
     .brand-wordmark { width: 100%; height: auto; }
@@ -30,10 +30,16 @@
     .value-columns span { display: block; margin-bottom: 15px; color: var(--gold); font-size: 12px; font-weight: 600; }
     .value-columns h3 { margin-bottom: 22px; color: #fff; font-size: clamp(46px, 5vw, 70px); line-height: .95; }
     .values-section .fine-print { border-top-color: rgba(255, 255, 255, .25); }
-    .discussion-section, .bond-section { align-items: stretch; gap: clamp(48px, 7vw, 100px); }
-    .discussion-section .split-copy, .bond-section .split-copy { padding-block: 36px; }
+    .discussion-section { position: relative; display: block; min-height: 900px; overflow: hidden; }
+    .discussion-section .split-copy { position: relative; z-index: 2; width: 58%; max-width: 680px; padding-block: 52px; }
+    .discussion-section .portrait-media { position: absolute; z-index: 0; inset: 0 0 0 40%; min-height: 900px; }
+    .discussion-section .portrait-media img { object-position: center 55%; }
+    .discussion-section .portrait-media::after { position: absolute; z-index: 1; inset: 0; background: linear-gradient(90deg, #fff 0%, rgba(255, 255, 255, .96) 12%, rgba(255, 255, 255, .7) 25%, rgba(255, 255, 255, .18) 42%, rgba(255, 255, 255, 0) 56%); content: ""; pointer-events: none; }
+    .discussion-section .portrait-media figcaption { z-index: 2; left: 44%; }
+    .bond-section { align-items: stretch; gap: clamp(48px, 7vw, 100px); }
+    .bond-section .split-copy { padding-block: 36px; }
     .discussion-section blockquote { margin: 50px 0; padding: 30px 0; border-block: 1px solid var(--gold); color: var(--blue); font-family: "Cormorant Garamond", serif; font-size: clamp(44px, 5vw, 72px); font-weight: 600; line-height: 1; }
-    .discussion-section .portrait-media, .bond-section .portrait-media { min-height: 760px; }
+    .bond-section .portrait-media { min-height: 760px; }
     .highlight-line { margin-top: 42px; padding-top: 28px; border-top: 1px solid var(--gold); color: var(--blue) !important; font-family: "Cormorant Garamond", serif; font-size: clamp(34px, 4vw, 52px); font-weight: 600; line-height: 1.08; }
     .history-section { display: block; }
     .history-intro { max-width: 860px; color: var(--muted); font-size: 18px; }
@@ -107,7 +113,12 @@
       .values-section .section-heading { padding-right: 0; }
       .values-zirkel { position: static; width: min(70vw, 300px); height: auto; margin: 50px auto 0; }
       .value-columns { gap: 44px; margin-top: 66px; }
-      .discussion-section .portrait-media, .bond-section .portrait-media { min-height: 520px; }
+      .discussion-section { display: grid; min-height: 0; overflow: visible; }
+      .discussion-section .split-copy { width: auto; max-width: 650px; padding-block: 36px; }
+      .discussion-section .portrait-media { position: relative; inset: auto; min-height: 520px; }
+      .discussion-section .portrait-media::after { display: none; }
+      .discussion-section .portrait-media figcaption { left: 0; }
+      .bond-section .portrait-media { min-height: 520px; }
       .history-milestones { grid-template-columns: 1fr; gap: 0; margin-block: 56px 28px; padding-left: 30px; }
       .history-milestones::before { top: 0; right: auto; bottom: 0; left: 7px; width: 2px; height: auto; background: linear-gradient(var(--line) 0 37%, var(--gold) 37% 100%); }
       .history-milestones li { padding: 0 0 42px 20px; }
