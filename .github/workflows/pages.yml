@@ -31,7 +31,7 @@ jobs:
           test -s styles.css
           test -s pages.css
           test -s script.js
-          test "$(find assets -type f -name '*.webp' | wc -l)" -eq 21
+          test "$(find assets -type f -name '*.webp' | wc -l)" -eq 27
           node --check script.js
           node tools/check-site.mjs
           grep -q '<html lang="de">' index.html
@@ -61,7 +61,7 @@ jobs:
         shell: bash
         run: |
           mkdir _site
-          cp index.html geschichte.html impressum.html datenschutz.html styles.css pages.css script.js CNAME favicon.png apple-touch-icon.png alemannia-wortmarke.png wappen-freigestellt.png Ball.png Kommerz.png Hausfront.png garten.png gemeinschaftszimmer.png zimmer1.png Zirkel_alt_klein.png _site/
+          cp index.html geschichte.html impressum.html datenschutz.html styles.css pages.css script.js CNAME favicon.png apple-touch-icon.png alemannia-wortmarke.png wappen-freigestellt.png Ball.png Kommerz.png Hausfront.png garten.png gemeinschaftszimmer.png zimmer1.png Zirkel_alt_klein.png gruppenfoto-wartburg.png gemeinsames-abendessen.png gespraech-im-garten.png _site/
           cp -R assets _site/
           touch _site/.nojekyll
 

@@ -13,6 +13,9 @@ PHOTOS = {
     "garten.png": "garten",
     "gemeinschaftszimmer.png": "gemeinschaftszimmer",
     "zimmer1.png": "zimmer",
+    "gruppenfoto-wartburg.png": "wartburg",
+    "gemeinsames-abendessen.png": "abendessen",
+    "gespraech-im-garten.png": "gartenrunde",
     "PXL_20260614_052443873.jpg": "hausfront-original",
     "PXL_20260613_085346785(1).jpg": "garten-original",
     "PXL_20260613_082859878.MP(1).jpg": "gemeinschaftszimmer-original",
@@ -45,7 +48,7 @@ def main() -> None:
     for source_name, stem in PHOTOS.items():
         with Image.open(ROOT / source_name) as image:
             image = image.convert("RGB")
-            for width in (720, 1440):
+            for width in sorted({min(width, image.width) for width in (720, 1440)}):
                 save_webp(resized(image, width), OUTPUT / f"{stem}-{width}.webp", lossless=False)
 
     for source_name, (stem, width) in GRAPHICS.items():
